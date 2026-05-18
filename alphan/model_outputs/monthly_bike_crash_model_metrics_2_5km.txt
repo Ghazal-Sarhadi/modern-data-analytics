@@ -1,0 +1,36 @@
+Model: logistic_regression
+Accuracy: 0.6011
+F1: 0.6480
+ROC AUC: 0.6755
+Confusion matrix [[TN, FP], [FN, TP]]:
+[[420 157]
+ [559 659]]
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.43      0.73      0.54       577
+           1       0.81      0.54      0.65      1218
+
+    accuracy                           0.60      1795
+   macro avg       0.62      0.63      0.59      1795
+weighted avg       0.69      0.60      0.61      1795
+
+--------------------------------------------------------------------------------
+Model: random_forest
+Accuracy: 0.7376
+F1: 0.8242
+ROC AUC: 0.7589
+Confusion matrix [[TN, FP], [FN, TP]]:
+[[ 220  357]
+ [ 114 1104]]
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.66      0.38      0.48       577
+           1       0.76      0.91      0.82      1218
+
+    accuracy                           0.74      1795
+   macro avg       0.71      0.64      0.65      1795
+weighted avg       0.72      0.74      0.71      1795
+
+--------------------------------------------------------------------------------

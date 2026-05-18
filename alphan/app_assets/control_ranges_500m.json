@@ -1,0 +1,72 @@
+{
+  "site_avg_crash_count_history": {
+    "label": "Historical average monthly crashes",
+    "min": 0.0,
+    "max": 1.25,
+    "mean": 0.43528091218874904,
+    "step": 0.0125
+  },
+  "total_precipitation_roll3_mean": {
+    "label": "Previous 3-month avg precipitation",
+    "min": 30.45666666666667,
+    "max": 118.90000000000002,
+    "mean": 80.2988234377435,
+    "step": 0.8844
+  },
+  "crashes_per_1000_cyclists_lag1": {
+    "label": "Previous month crashes per 1,000 cyclists",
+    "min": 0.0,
+    "max": 0.24425125610978876,
+    "mean": 0.04885664670489832,
+    "step": 0.01
+  },
+  "total_precipitation_lag1": {
+    "label": "Previous month total precipitation",
+    "min": 15.1,
+    "max": 137.3,
+    "mean": 82.55694249649369,
+    "step": 1.222
+  },
+  "crash_count_500m_roll6_sum": {
+    "label": "Previous 6-month crashes (500 m)",
+    "min": 0.0,
+    "max": 8.0,
+    "mean": 2.48013090229079,
+    "step": 0.08
+  },
+  "avg_temperature_2m_roll3_mean": {
+    "label": "Previous 3-month avg temperature",
+    "min": 5.401785282258067,
+    "max": 18.77243578255675,
+    "mean": 11.96001288098875,
+    "step": 0.1337
+  },
+  "avg_temperature_2m_lag1": {
+    "label": "Previous month average temperature",
+    "min": 3.7968380376344086,
+    "max": 20.029722222222222,
+    "mean": 11.93506570738799,
+    "step": 0.1623
+  },
+  "avg_wind_speed_10m_roll3_mean": {
+    "label": "Previous 3-month avg wind speed",
+    "min": 11.064317302924733,
+    "max": 18.905795306621567,
+    "mean": 14.556182947595522,
+    "step": 0.0784
+  },
+  "avg_wind_speed_10m_lag1": {
+    "label": "Previous month average wind speed",
+    "min": 10.558134518527778,
+    "max": 19.66374201615404,
+    "mean": 14.579631664006541,
+    "step": 0.0911
+  },
+  "avg_cloud_cover_roll3_mean": {
+    "label": "Previous 3-month avg cloud cover",
+    "min": 54.74357452210275,
+    "max": 81.23930344415606,
+    "mean": 68.5541734068316,
+    "step": 0.265
+  }
+}

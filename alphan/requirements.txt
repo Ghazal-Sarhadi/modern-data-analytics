@@ -1,0 +1,17 @@
+pandas
+numpy
+scikit-learn
+folium
+flask
+streamlit
+optuna
+openpyxl
+pyproj
+requests-cache
+retry-requests
+openmeteo-requests
+torch
+tensorflow
+keras
+catboost
+xgboost

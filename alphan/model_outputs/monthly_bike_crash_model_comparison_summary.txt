@@ -1,0 +1,27 @@
+Dataset: bike_only_500m
+Rows=4748, Stations=142, Periods=62, Mean count=0.1567, Zero share=0.8703, Positive share=0.1297
+Classification comparison:
+  logistic_regression: bike_only accuracy=0.7237, f1=0.3333, roc_auc=0.6606 | all_crashes accuracy=0.6267, f1=0.4932, roc_auc=0.6612
+  random_forest: bike_only accuracy=0.8596, f1=0.2222, roc_auc=0.7130 | all_crashes accuracy=0.7231, f1=0.4384, roc_auc=0.7096
+Regression comparison:
+  poisson_regression: bike_only mae=0.2692, rmse=0.6005, r2=-0.9322 | all_crashes mae=0.5881, rmse=0.7623, r2=0.0780
+  random_forest_regressor: bike_only mae=0.2850, rmse=0.4301, r2=0.0088 | all_crashes mae=0.5495, rmse=0.7219, r2=0.1731
+----------------------------------------------------------------------------------------------------
+Dataset: bike_only_1km
+Rows=4748, Stations=142, Periods=62, Mean count=0.5295, Zero share=0.6834, Positive share=0.3166
+Classification comparison:
+  logistic_regression: bike_only accuracy=0.6836, f1=0.4836, roc_auc=0.6727 | all_crashes accuracy=0.6267, f1=0.4932, roc_auc=0.6612
+  random_forest: bike_only accuracy=0.7382, f1=0.4635, roc_auc=0.7265 | all_crashes accuracy=0.7231, f1=0.4384, roc_auc=0.7096
+Regression comparison:
+  poisson_regression: bike_only mae=0.6573, rmse=1.2385, r2=-0.4898 | all_crashes mae=0.5881, rmse=0.7623, r2=0.0780
+  random_forest_regressor: bike_only mae=0.5623, rmse=0.7918, r2=0.3910 | all_crashes mae=0.5495, rmse=0.7219, r2=0.1731
+----------------------------------------------------------------------------------------------------
+Dataset: bike_only_2_5km
+Rows=4748, Stations=142, Periods=62, Mean count=2.5190, Zero share=0.2896, Positive share=0.7104
+Classification comparison:
+  logistic_regression: bike_only accuracy=0.6011, f1=0.6480, roc_auc=0.6755 | all_crashes accuracy=0.5978, f1=0.7286, roc_auc=0.6975
+  random_forest: bike_only accuracy=0.7376, f1=0.8242, roc_auc=0.7589 | all_crashes accuracy=0.9220, f1=0.9589, roc_auc=0.7794
+Regression comparison:
+  poisson_regression: bike_only mae=1.9546, rmse=2.6910, r2=0.2190 | all_crashes mae=3.9720, rmse=5.2218, r2=0.2535
+  random_forest_regressor: bike_only mae=1.4582, rmse=2.0538, r2=0.5451 | all_crashes mae=2.5223, rmse=3.4017, r2=0.6832
+----------------------------------------------------------------------------------------------------

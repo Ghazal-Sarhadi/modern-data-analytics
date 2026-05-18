@@ -1,0 +1,16 @@
+Model: catboost_classifier
+Accuracy: 0.7397
+F1: 0.4401
+ROC AUC: 0.7152
+Confusion matrix [[TN, FP], [FN, TP]]:
+[[1053  110]
+ [ 320  169]]
+Classification report:
+              precision    recall  f1-score   support
+
+         0.0       0.77      0.91      0.83      1163
+         1.0       0.61      0.35      0.44       489
+
+    accuracy                           0.74      1652
+   macro avg       0.69      0.63      0.64      1652
+weighted avg       0.72      0.74      0.71      1652

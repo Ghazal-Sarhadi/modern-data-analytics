@@ -1,0 +1,20 @@
+Combined station group experiment vs current site-level 1 km model
+Grouped rows: 2733
+Grouped counter count: 87
+Grouped positive share: 0.3052
+
+Grouped CatBoost metrics:
+  Threshold: 0.35
+  Accuracy: 0.7637
+  Precision: 0.6063
+  Recall: 0.6201
+  F1: 0.6132
+  ROC AUC: 0.7747
+
+Current site-level deployed metrics:
+  Threshold: 0.34
+  Accuracy: 0.7361
+  Precision: 0.5604
+  Recall: 0.6575
+  F1: 0.6051
+  ROC AUC: 0.7641

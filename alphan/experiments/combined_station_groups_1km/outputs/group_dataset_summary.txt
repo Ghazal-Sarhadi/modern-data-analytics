@@ -1,0 +1,9 @@
+Combined station group experiment
+Original site count: 151
+Grouped counter count: 95
+Singleton groups: 41
+Combined multi-site groups: 54
+Monthly grouped rows: 2940
+Next-month grouped rows: 2733
+Mean monthly grouped bike crash count: 0.5262
+Next-month positive target share: 0.3052
