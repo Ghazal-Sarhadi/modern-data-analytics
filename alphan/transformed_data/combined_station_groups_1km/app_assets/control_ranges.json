@@ -1,0 +1,72 @@
+{
+  "group_avg_bike_crash_count_history": {
+    "label": "Historical average monthly bike crashes",
+    "min": 0.0,
+    "max": 1.7801932367149758,
+    "mean": 0.5191090173722461,
+    "step": 0.0178
+  },
+  "bike_crash_count_1km_grouped_roll6_sum": {
+    "label": "Previous 6-month bike crashes (1.0 km grouped)",
+    "min": 0.0,
+    "max": 11.0,
+    "mean": 2.914371935118823,
+    "step": 0.11
+  },
+  "total_count_sum_lag1": {
+    "label": "Previous month total cyclists",
+    "min": 2345.0,
+    "max": 61895.0,
+    "mean": 22650.31007167107,
+    "step": 595.5
+  },
+  "bike_crash_count_1km_grouped_roll3_sum": {
+    "label": "Previous 3-month bike crashes (1.0 km grouped)",
+    "min": 0.0,
+    "max": 6.0,
+    "mean": 1.5409279517163335,
+    "step": 0.06
+  },
+  "bike_crashes_per_1000_cyclists_lag1": {
+    "label": "Previous month bike crashes per 1,000 cyclists",
+    "min": 0.0,
+    "max": 0.1330923116654453,
+    "mean": 0.030008868032753565,
+    "step": 0.01
+  },
+  "total_count_in_lag1": {
+    "label": "Previous month inbound cyclists",
+    "min": 257.0,
+    "max": 35260.0,
+    "mean": 11950.878536401358,
+    "step": 350.03
+  },
+  "bike_crash_count_1km_grouped_lag1": {
+    "label": "Previous month bike crashes (1.0 km grouped)",
+    "min": 0.0,
+    "max": 2.0,
+    "mean": 0.5314975480950584,
+    "step": 0.02
+  },
+  "total_count_out_lag1": {
+    "label": "Previous month outbound cyclists",
+    "min": 208.5,
+    "max": 31981.5,
+    "mean": 10699.43153526971,
+    "step": 317.73
+  },
+  "total_precipitation_lag1": {
+    "label": "Previous month total precipitation",
+    "min": 15.149999999999999,
+    "max": 137.5,
+    "mean": 82.42525702707097,
+    "step": 1.2235
+  },
+  "avg_temperature_2m_lag1": {
+    "label": "Previous month average temperature",
+    "min": 3.7966733870967744,
+    "max": 20.012400917452396,
+    "mean": 11.920908593015463,
+    "step": 0.1622
+  }
+}

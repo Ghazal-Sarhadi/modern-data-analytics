@@ -1,0 +1,1672 @@
+{
+  "summary": {
+    "label": "1.0 km grouped bike-only",
+    "meters": 1000,
+    "group_count": 87,
+    "total_observed_crashes": 1547.0,
+    "average_monthly_crashes": 0.5586377004420433,
+    "average_monthly_cyclists": 24949.650854811494,
+    "median_smoothed_rate": 0.18785694795152316,
+    "highest_risk_group": "Genk",
+    "mean_forecast_probability": 0.25409842660850085,
+    "positive_forecast_share": 0.2413793103448276,
+    "deployed_model": {
+      "name": "catboost_classifier",
+      "threshold": 0.34,
+      "accuracy": 0.7686274509803922,
+      "f1": 0.6156351791530945,
+      "roc_auc": 0.7728047935210856
+    }
+  },
+  "municipalities": [
+    "Aalst",
+    "Aalter",
+    "Aarschot",
+    "Ardooie",
+    "As",
+    "Asse",
+    "Balen",
+    "Beersel",
+    "Beveren",
+    "Bilzen",
+    "Brasschaat",
+    "Brecht",
+    "Bree",
+    "Brugge",
+    "Deinze",
+    "Dendermonde",
+    "Dessel",
+    "Diest",
+    "District Leuven",
+    "District Vilvoorde-gewestwegen",
+    "Evergem",
+    "Geel",
+    "Genk",
+    "Gent",
+    "Halle",
+    "Hamme",
+    "Hasselt",
+    "Heers",
+    "Heist-op-den-Berg",
+    "Herent",
+    "Herentals",
+    "Herk-de-Stad",
+    "Houthalen-Helchteren",
+    "Ieper",
+    "Izegem",
+    "Kampenhout",
+    "Kortrijk",
+    "Kraainem",
+    "Lanaken",
+    "Leuven",
+    "Lier",
+    "Lille",
+    "Lokeren",
+    "Lommel",
+    "Lummen",
+    "Maaseik",
+    "Maasmechelen",
+    "Machelen",
+    "Malle",
+    "Mechelen",
+    "Meise",
+    "Melle",
+    "Meulebeke",
+    "Nazareth",
+    "Nieuwpoort",
+    "Nijlen",
+    "Oostende",
+    "Peer",
+    "Pelt",
+    "Pepingen",
+    "Sint-Pieters-Leeuw",
+    "Tienen",
+    "Tongeren",
+    "Torhout",
+    "Vilvoorde",
+    "Wemmel",
+    "Wervik",
+    "Westerlo",
+    "Zaventem",
+    "Zele",
+    "Zemst"
+  ],
+  "method_evidence": [
+    "This grouped-counter app merges nearby paired counters into grouped station entities before modeling.",
+    "Bike-only crashes are deduplicated within each grouped counter so one crash is not counted twice across paired members.",
+    "The grouped forecasting model keeps the same 1.0 km bike-only target and the same time-based validation logic as the current site-level app.",
+    "This app is separate from the current deployed site-level app and is intended only for comparison."
+  ],
+  "groups": {
+    "historical": [
+      {
+        "group_id": 34,
+        "group_name": "Genk",
+        "gemeente": "Genk",
+        "lat": 50.97172,
+        "long": 5.48927,
+        "rank": 1,
+        "score": 1.8263758418573441
+      },
+      {
+        "group_id": 38,
+        "group_name": "St. pieters leeuw teller 2",
+        "gemeente": "Halle",
+        "lat": 50.75509,
+        "long": 4.24943,
+        "rank": 2,
+        "score": 0.88624911042891
+      },
+      {
+        "group_id": 82,
+        "group_name": "St. pieters leeuw teller 1",
+        "gemeente": "Sint-Pieters-Leeuw",
+        "lat": 50.75533,
+        "long": 4.24951,
+        "rank": 3,
+        "score": 0.7674172745709161
+      },
+      {
+        "group_id": 54,
+        "group_name": "Kortrijk teller 1",
+        "gemeente": "Kortrijk",
+        "lat": 50.81917,
+        "long": 3.257295,
+        "rank": 4,
+        "score": 0.7016327910873872
+      },
+      {
+        "group_id": 58,
+        "group_name": "test leuven",
+        "gemeente": "Leuven",
+        "lat": 50.875533,
+        "long": 4.7153163,
+        "rank": 5,
+        "score": 0.6388042641143842
+      },
+      {
+        "group_id": 67,
+        "group_name": "Maasmechelen teller 1",
+        "gemeente": "Maasmechelen",
+        "lat": 50.97034,
+        "long": 5.6980450000000005,
+        "rank": 6,
+        "score": 0.6000248118410461
+      },
+      {
+        "group_id": 7,
+        "group_name": "Asse teller 2",
+        "gemeente": "Asse",
+        "lat": 50.89132,
+        "long": 4.1709,
+        "rank": 7,
+        "score": 0.5278689992608595
+      },
+      {
+        "group_id": 14,
+        "group_name": "Bree",
+        "gemeente": "Bree",
+        "lat": 51.13679500160176,
+        "long": 5.597669323604317,
+        "rank": 8,
+        "score": 0.5201036074584376
+      },
+      {
+        "group_id": 53,
+        "group_name": "Kortrijk 1",
+        "gemeente": "Kortrijk",
+        "lat": 50.833355,
+        "long": 3.27775,
+        "rank": 9,
+        "score": 0.46644701185675197
+      },
+      {
+        "group_id": 35,
+        "group_name": "Gent",
+        "gemeente": "Gent",
+        "lat": 51.03018,
+        "long": 3.70146,
+        "rank": 10,
+        "score": 0.4650135734801051
+      },
+      {
+        "group_id": 31,
+        "group_name": "Evergem 2",
+        "gemeente": "Evergem",
+        "lat": 51.10892,
+        "long": 3.703075,
+        "rank": 11,
+        "score": 0.45178136338111985
+      },
+      {
+        "group_id": 80,
+        "group_name": "Pelt teller 1",
+        "gemeente": "Pelt",
+        "lat": 51.231135,
+        "long": 5.443759999999999,
+        "rank": 12,
+        "score": 0.4512984208207793
+      },
+      {
+        "group_id": 24,
+        "group_name": "Diest teller 1",
+        "gemeente": "Diest",
+        "lat": 50.977945,
+        "long": 5.044775,
+        "rank": 13,
+        "score": 0.4245594582623266
+      },
+      {
+        "group_id": 39,
+        "group_name": "Hamme totem",
+        "gemeente": "Hamme",
+        "lat": 51.1017709,
+        "long": 4.1469307,
+        "rank": 14,
+        "score": 0.40949697070128627
+      },
+      {
+        "group_id": 41,
+        "group_name": "Hasselt ring",
+        "gemeente": "Hasselt",
+        "lat": 50.9300038,
+        "long": 5.3438616,
+        "rank": 15,
+        "score": 0.3816298297679504
+      },
+      {
+        "group_id": 74,
+        "group_name": "Deinze teller 1",
+        "gemeente": "Nazareth",
+        "lat": 50.9598305,
+        "long": 3.555502,
+        "rank": 16,
+        "score": 0.3695088096909993
+      },
+      {
+        "group_id": 48,
+        "group_name": "Houthalen-Helchteren",
+        "gemeente": "Houthalen-Helchteren",
+        "lat": 51.0644267,
+        "long": 5.3819796,
+        "rank": 17,
+        "score": 0.36567322543887937
+      },
+      {
+        "group_id": 6,
+        "group_name": "Asse teller 1",
+        "gemeente": "Asse",
+        "lat": 50.89621,
+        "long": 4.17294,
+        "rank": 18,
+        "score": 0.35289940263403174
+      },
+      {
+        "group_id": 16,
+        "group_name": "Brugge",
+        "gemeente": "Brugge",
+        "lat": 51.22632,
+        "long": 3.24095,
+        "rank": 19,
+        "score": 0.33768065905506817
+      },
+      {
+        "group_id": 4,
+        "group_name": "Ardooie teller 1",
+        "gemeente": "Ardooie",
+        "lat": 50.967835,
+        "long": 3.18445,
+        "rank": 20,
+        "score": 0.33333142866455423
+      },
+      {
+        "group_id": 85,
+        "group_name": "Torhout teller 1",
+        "gemeente": "Torhout",
+        "lat": 51.07154,
+        "long": 3.082525,
+        "rank": 21,
+        "score": 0.3274654122655624
+      },
+      {
+        "group_id": 78,
+        "group_name": "Oostende 2",
+        "gemeente": "Oostende",
+        "lat": 51.213745,
+        "long": 2.92754,
+        "rank": 22,
+        "score": 0.31799947415191315
+      },
+      {
+        "group_id": 17,
+        "group_name": "Brugge teller 1",
+        "gemeente": "Brugge",
+        "lat": 51.23019,
+        "long": 3.22809,
+        "rank": 23,
+        "score": 0.30988664878092387
+      },
+      {
+        "group_id": 36,
+        "group_name": "Gent teller 1",
+        "gemeente": "Gent",
+        "lat": 51.02811425,
+        "long": 3.76826385,
+        "rank": 24,
+        "score": 0.28963835742161137
+      },
+      {
+        "group_id": 52,
+        "group_name": "Eco Display Classic Budastraat",
+        "gemeente": "Kortrijk",
+        "lat": 50.83066,
+        "long": 3.26286,
+        "rank": 25,
+        "score": 0.2870029882052301
+      },
+      {
+        "group_id": 2,
+        "group_name": "Aalter",
+        "gemeente": "Aalter",
+        "lat": 51.1058367,
+        "long": 3.4350591,
+        "rank": 26,
+        "score": 0.2864168073755291
+      },
+      {
+        "group_id": 59,
+        "group_name": "leuven totem",
+        "gemeente": "Leuven",
+        "lat": 50.8868972,
+        "long": 4.70837595,
+        "rank": 27,
+        "score": 0.2859422815345789
+      },
+      {
+        "group_id": 22,
+        "group_name": "Dendermonde totem",
+        "gemeente": "Dendermonde",
+        "lat": 51.0373312,
+        "long": 4.102261,
+        "rank": 28,
+        "score": 0.27356873364851053
+      },
+      {
+        "group_id": 87,
+        "group_name": "Wemmel teller 1",
+        "gemeente": "Wemmel",
+        "lat": 50.914285,
+        "long": 4.295695,
+        "rank": 29,
+        "score": 0.27108559798028264
+      },
+      {
+        "group_id": 44,
+        "group_name": "Heist op den Berg 2",
+        "gemeente": "Heist-op-den-Berg",
+        "lat": 51.06904,
+        "long": 4.69524,
+        "rank": 30,
+        "score": 0.26916940147724333
+      },
+      {
+        "group_id": 37,
+        "group_name": "Gent R4",
+        "gemeente": "Gent",
+        "lat": 51.0876313,
+        "long": 3.7587918,
+        "rank": 31,
+        "score": 0.26012802080197434
+      },
+      {
+        "group_id": 72,
+        "group_name": "Melle teller 2",
+        "gemeente": "Melle",
+        "lat": 50.9986113,
+        "long": 3.8040599,
+        "rank": 32,
+        "score": 0.23664329487821537
+      },
+      {
+        "group_id": 43,
+        "group_name": "Heist op den Berg 1",
+        "gemeente": "Heist-op-den-Berg",
+        "lat": 51.06759,
+        "long": 4.68823,
+        "rank": 33,
+        "score": 0.2350206966883002
+      },
+      {
+        "group_id": 92,
+        "group_name": "Zaventem totem",
+        "gemeente": "Zaventem",
+        "lat": 50.8871216,
+        "long": 4.4597084,
+        "rank": 34,
+        "score": 0.23413413417360107
+      },
+      {
+        "group_id": 86,
+        "group_name": "Vilvoorde",
+        "gemeente": "Vilvoorde",
+        "lat": 50.91372,
+        "long": 4.41497,
+        "rank": 35,
+        "score": 0.22531454067493992
+      },
+      {
+        "group_id": 18,
+        "group_name": "TEST Validatie BRUGGE Y2H22022134",
+        "gemeente": "Brugge",
+        "lat": 51.22632,
+        "long": 3.24095,
+        "rank": 36,
+        "score": 0.21797868264226808
+      },
+      {
+        "group_id": 10,
+        "group_name": "Beveren teller 1",
+        "gemeente": "Beveren",
+        "lat": 51.19646335,
+        "long": 4.2361924,
+        "rank": 37,
+        "score": 0.2154327164235138
+      },
+      {
+        "group_id": 73,
+        "group_name": "Meulebeke teller 1",
+        "gemeente": "Meulebeke",
+        "lat": 50.960385,
+        "long": 3.24481,
+        "rank": 38,
+        "score": 0.21048331497869344
+      },
+      {
+        "group_id": 49,
+        "group_name": "Ieper",
+        "gemeente": "Ieper",
+        "lat": 50.85025,
+        "long": 2.85616,
+        "rank": 39,
+        "score": 0.20511585006796892
+      },
+      {
+        "group_id": 11,
+        "group_name": "Bilzen",
+        "gemeente": "Bilzen",
+        "lat": 50.86015,
+        "long": 5.50161,
+        "rank": 40,
+        "score": 0.19568730638781967
+      },
+      {
+        "group_id": 1,
+        "group_name": "Aalst 2",
+        "gemeente": "Aalst",
+        "lat": 50.93455666666667,
+        "long": 4.015630000000001,
+        "rank": 41,
+        "score": 0.19404690151810958
+      },
+      {
+        "group_id": 93,
+        "group_name": "Zele teller 1",
+        "gemeente": "Zele",
+        "lat": 51.0605869,
+        "long": 4.055221850000001,
+        "rank": 42,
+        "score": 0.19102798766258225
+      },
+      {
+        "group_id": 33,
+        "group_name": "Bokrijk",
+        "gemeente": "Genk",
+        "lat": 50.95264,
+        "long": 5.41001,
+        "rank": 43,
+        "score": 0.1881309484854719
+      },
+      {
+        "group_id": 83,
+        "group_name": "Tienen 2",
+        "gemeente": "Tienen",
+        "lat": 50.81330918367914,
+        "long": 4.935166168467146,
+        "rank": 44,
+        "score": 0.18785694795152316
+      },
+      {
+        "group_id": 61,
+        "group_name": "Gierde lille",
+        "gemeente": "Lille",
+        "lat": 51.24541825,
+        "long": 4.82981335,
+        "rank": 45,
+        "score": 0.18775962570713772
+      },
+      {
+        "group_id": 62,
+        "group_name": "Lokeren teller 1",
+        "gemeente": "Lokeren",
+        "lat": 51.09628,
+        "long": 3.97024,
+        "rank": 46,
+        "score": 0.1824748127766388
+      },
+      {
+        "group_id": 70,
+        "group_name": "Mechelen teller 1",
+        "gemeente": "Mechelen",
+        "lat": 51.04567,
+        "long": 4.468825,
+        "rank": 47,
+        "score": 0.17784911135668963
+      },
+      {
+        "group_id": 55,
+        "group_name": "Tervuren",
+        "gemeente": "Kraainem",
+        "lat": 50.81896,
+        "long": 4.47803,
+        "rank": 48,
+        "score": 0.17597664500922375
+      },
+      {
+        "group_id": 51,
+        "group_name": "Kampenhout teller 1",
+        "gemeente": "Kampenhout",
+        "lat": 50.956355,
+        "long": 4.59241,
+        "rank": 49,
+        "score": 0.1678992186488326
+      },
+      {
+        "group_id": 50,
+        "group_name": "Roeselare totem",
+        "gemeente": "Izegem",
+        "lat": 50.91717,
+        "long": 3.18772,
+        "rank": 50,
+        "score": 0.1636650167313595
+      },
+      {
+        "group_id": 65,
+        "group_name": "Lummen",
+        "gemeente": "Lummen",
+        "lat": 50.979745,
+        "long": 5.209485,
+        "rank": 51,
+        "score": 0.15043123098947117
+      },
+      {
+        "group_id": 47,
+        "group_name": "Herk De Stad",
+        "gemeente": "Herk-de-Stad",
+        "lat": 50.9437,
+        "long": 5.177205000000001,
+        "rank": 52,
+        "score": 0.1488606167061492
+      },
+      {
+        "group_id": 64,
+        "group_name": "Lommel teller 1",
+        "gemeente": "Lommel",
+        "lat": 51.23288,
+        "long": 5.292,
+        "rank": 53,
+        "score": 0.14697674473239622
+      },
+      {
+        "group_id": 21,
+        "group_name": "Nevele",
+        "gemeente": "Deinze",
+        "lat": 51.0276612,
+        "long": 3.558569,
+        "rank": 54,
+        "score": 0.14466513333845893
+      },
+      {
+        "group_id": 71,
+        "group_name": "Grimbergen",
+        "gemeente": "Meise",
+        "lat": 50.92127,
+        "long": 4.34013,
+        "rank": 55,
+        "score": 0.14384750690738096
+      },
+      {
+        "group_id": 32,
+        "group_name": "Geel teller 1",
+        "gemeente": "Geel",
+        "lat": 51.148115,
+        "long": 4.996705,
+        "rank": 56,
+        "score": 0.13282757409917892
+      },
+      {
+        "group_id": 5,
+        "group_name": "As",
+        "gemeente": "As",
+        "lat": 51.00509,
+        "long": 5.60389,
+        "rank": 57,
+        "score": 0.13059438554275066
+      },
+      {
+        "group_id": 40,
+        "group_name": "Hasselt-Kempische brug",
+        "gemeente": "Hasselt",
+        "lat": 50.94084615,
+        "long": 5.3420024,
+        "rank": 58,
+        "score": 0.12899465243042832
+      },
+      {
+        "group_id": 75,
+        "group_name": "Nieuwpoort totem",
+        "gemeente": "Nieuwpoort",
+        "lat": 51.134995,
+        "long": 2.74329,
+        "rank": 59,
+        "score": 0.12490837707044362
+      },
+      {
+        "group_id": 20,
+        "group_name": "Deinze teller 2",
+        "gemeente": "Deinze",
+        "lat": 50.96018,
+        "long": 3.55578,
+        "rank": 60,
+        "score": 0.11932631906685721
+      },
+      {
+        "group_id": 8,
+        "group_name": "Balen 1",
+        "gemeente": "Balen",
+        "lat": 51.160205,
+        "long": 5.19007,
+        "rank": 61,
+        "score": 0.10959290629527833
+      },
+      {
+        "group_id": 9,
+        "group_name": "Beersel teller 1",
+        "gemeente": "Beersel",
+        "lat": 50.751515,
+        "long": 4.3332,
+        "rank": 62,
+        "score": 0.10421135500315243
+      },
+      {
+        "group_id": 60,
+        "group_name": "Lier teller 1",
+        "gemeente": "Lier",
+        "lat": 51.11696,
+        "long": 4.584405,
+        "rank": 63,
+        "score": 0.09910709724917945
+      },
+      {
+        "group_id": 88,
+        "group_name": "Wervik teller 2",
+        "gemeente": "Wervik",
+        "lat": 50.805675,
+        "long": 3.09182,
+        "rank": 64,
+        "score": 0.09639732859992341
+      },
+      {
+        "group_id": 76,
+        "group_name": "Nieuwpoort teller 1",
+        "gemeente": "Nieuwpoort",
+        "lat": 51.13397,
+        "long": 2.75624,
+        "rank": 65,
+        "score": 0.09030890691322818
+      },
+      {
+        "group_id": 79,
+        "group_name": "Peer teller 1",
+        "gemeente": "Peer",
+        "lat": 51.134315,
+        "long": 5.478545,
+        "rank": 66,
+        "score": 0.09025775226945827
+      },
+      {
+        "group_id": 23,
+        "group_name": "Retie",
+        "gemeente": "Dessel",
+        "lat": 51.25467015,
+        "long": 5.1038861,
+        "rank": 67,
+        "score": 0.08966657109641729
+      },
+      {
+        "group_id": 46,
+        "group_name": "Herentals totem",
+        "gemeente": "Herentals",
+        "lat": 51.1736963,
+        "long": 4.8123065,
+        "rank": 68,
+        "score": 0.0828984790956348
+      },
+      {
+        "group_id": 12,
+        "group_name": "Brasschaat 2",
+        "gemeente": "Brasschaat",
+        "lat": 51.275075,
+        "long": 4.471955,
+        "rank": 69,
+        "score": 0.08273671655963837
+      },
+      {
+        "group_id": 89,
+        "group_name": "Geel totem",
+        "gemeente": "Westerlo",
+        "lat": 51.1348979,
+        "long": 4.9397605,
+        "rank": 70,
+        "score": 0.07704451064713463
+      },
+      {
+        "group_id": 68,
+        "group_name": "Machelen",
+        "gemeente": "Machelen",
+        "lat": 50.91618331151478,
+        "long": 4.456121776137429,
+        "rank": 71,
+        "score": 0.07271406541845575
+      },
+      {
+        "group_id": 15,
+        "group_name": "Brugge",
+        "gemeente": "Brugge",
+        "lat": 51.17416,
+        "long": 3.20048,
+        "rank": 72,
+        "score": 0.06818089185139702
+      },
+      {
+        "group_id": 90,
+        "group_name": "Westerlo teller 1",
+        "gemeente": "Westerlo",
+        "lat": 51.081955,
+        "long": 4.913295,
+        "rank": 73,
+        "score": 0.06663850280218488
+      },
+      {
+        "group_id": 3,
+        "group_name": "Aarschot",
+        "gemeente": "Aarschot",
+        "lat": 50.99084,
+        "long": 4.81259,
+        "rank": 74,
+        "score": 0.0665687565477413
+      },
+      {
+        "group_id": 19,
+        "group_name": "Brugge, Sint-Andries",
+        "gemeente": "Brugge",
+        "lat": 51.19286,
+        "long": 3.16252,
+        "rank": 75,
+        "score": 0.0641544425604511
+      },
+      {
+        "group_id": 57,
+        "group_name": "Heverlee teller 2",
+        "gemeente": "Leuven",
+        "lat": 50.8466164,
+        "long": 4.6957187000000005,
+        "rank": 76,
+        "score": 0.06049882213016564
+      },
+      {
+        "group_id": 94,
+        "group_name": "Zemst",
+        "gemeente": "Zemst",
+        "lat": 50.9903936,
+        "long": 4.4707023,
+        "rank": 77,
+        "score": 0.060357653716125885
+      },
+      {
+        "group_id": 81,
+        "group_name": "Pepingen teller 1",
+        "gemeente": "Pepingen",
+        "lat": 50.75836,
+        "long": 4.165285,
+        "rank": 78,
+        "score": 0.055166197809748824
+      },
+      {
+        "group_id": 91,
+        "group_name": "Zaventem",
+        "gemeente": "Zaventem",
+        "lat": 50.86995,
+        "long": 4.45444,
+        "rank": 79,
+        "score": 0.05300583987352363
+      },
+      {
+        "group_id": 66,
+        "group_name": "Maaseik teller 1",
+        "gemeente": "Maaseik",
+        "lat": 51.093515,
+        "long": 5.797205,
+        "rank": 80,
+        "score": 0.05191271964459816
+      },
+      {
+        "group_id": 69,
+        "group_name": "Malle teller 1",
+        "gemeente": "Malle",
+        "lat": 51.316815,
+        "long": 4.73862,
+        "rank": 81,
+        "score": 0.04439348654861871
+      },
+      {
+        "group_id": 13,
+        "group_name": "Brecht teller 1",
+        "gemeente": "Brecht",
+        "lat": 51.357455,
+        "long": 4.62426,
+        "rank": 82,
+        "score": 0.04133297723914576
+      },
+      {
+        "group_id": 45,
+        "group_name": "Herent teller 1",
+        "gemeente": "Herent",
+        "lat": 50.891315000000006,
+        "long": 4.64687,
+        "rank": 83,
+        "score": 0.035251474017775064
+      },
+      {
+        "group_id": 84,
+        "group_name": "Tongeren",
+        "gemeente": "Tongeren",
+        "lat": 50.79286,
+        "long": 5.52825,
+        "rank": 84,
+        "score": 0.028922769133930357
+      },
+      {
+        "group_id": 42,
+        "group_name": "Heers",
+        "gemeente": "Heers",
+        "lat": 50.75487,
+        "long": 5.30322,
+        "rank": 85,
+        "score": 0.02578274235584429
+      },
+      {
+        "group_id": 77,
+        "group_name": "Nijlen teller 1",
+        "gemeente": "Nijlen",
+        "lat": 51.149935,
+        "long": 4.6447400000000005,
+        "rank": 86,
+        "score": 0.024954128582140717
+      },
+      {
+        "group_id": 56,
+        "group_name": "Lanaken teller 1",
+        "gemeente": "Lanaken",
+        "lat": 50.881215,
+        "long": 5.63076,
+        "rank": 87,
+        "score": 0.006083949845381354
+      }
+    ],
+    "forecast": [
+      {
+        "group_id": 52,
+        "group_name": "Eco Display Classic Budastraat",
+        "gemeente": "Kortrijk",
+        "lat": 50.83066,
+        "long": 3.26286,
+        "rank": 1,
+        "score": 0.949233767942383
+      },
+      {
+        "group_id": 59,
+        "group_name": "leuven totem",
+        "gemeente": "Leuven",
+        "lat": 50.8868972,
+        "long": 4.70837595,
+        "rank": 2,
+        "score": 0.9410017487719121
+      },
+      {
+        "group_id": 58,
+        "group_name": "test leuven",
+        "gemeente": "Leuven",
+        "lat": 50.875533,
+        "long": 4.7153163,
+        "rank": 3,
+        "score": 0.9159160281446691
+      },
+      {
+        "group_id": 53,
+        "group_name": "Kortrijk 1",
+        "gemeente": "Kortrijk",
+        "lat": 50.833355,
+        "long": 3.27775,
+        "rank": 4,
+        "score": 0.8323044821034533
+      },
+      {
+        "group_id": 22,
+        "group_name": "Dendermonde totem",
+        "gemeente": "Dendermonde",
+        "lat": 51.0373312,
+        "long": 4.102261,
+        "rank": 5,
+        "score": 0.7924193605115712
+      },
+      {
+        "group_id": 41,
+        "group_name": "Hasselt ring",
+        "gemeente": "Hasselt",
+        "lat": 50.9300038,
+        "long": 5.3438616,
+        "rank": 6,
+        "score": 0.7315780902683962
+      },
+      {
+        "group_id": 78,
+        "group_name": "Oostende 2",
+        "gemeente": "Oostende",
+        "lat": 51.213745,
+        "long": 2.92754,
+        "rank": 7,
+        "score": 0.7100021715416702
+      },
+      {
+        "group_id": 18,
+        "group_name": "TEST Validatie BRUGGE Y2H22022134",
+        "gemeente": "Brugge",
+        "lat": 51.22632,
+        "long": 3.24095,
+        "rank": 8,
+        "score": 0.6371505928524654
+      },
+      {
+        "group_id": 40,
+        "group_name": "Hasselt-Kempische brug",
+        "gemeente": "Hasselt",
+        "lat": 50.94084615,
+        "long": 5.3420024,
+        "rank": 9,
+        "score": 0.6369489274797124
+      },
+      {
+        "group_id": 70,
+        "group_name": "Mechelen teller 1",
+        "gemeente": "Mechelen",
+        "lat": 51.04567,
+        "long": 4.468825,
+        "rank": 10,
+        "score": 0.5943363279044386
+      },
+      {
+        "group_id": 35,
+        "group_name": "Gent",
+        "gemeente": "Gent",
+        "lat": 51.03018,
+        "long": 3.70146,
+        "rank": 11,
+        "score": 0.584995843399642
+      },
+      {
+        "group_id": 36,
+        "group_name": "Gent teller 1",
+        "gemeente": "Gent",
+        "lat": 51.02811425,
+        "long": 3.76826385,
+        "rank": 12,
+        "score": 0.5801269365724183
+      },
+      {
+        "group_id": 54,
+        "group_name": "Kortrijk teller 1",
+        "gemeente": "Kortrijk",
+        "lat": 50.81917,
+        "long": 3.257295,
+        "rank": 13,
+        "score": 0.5309622647853719
+      },
+      {
+        "group_id": 31,
+        "group_name": "Evergem 2",
+        "gemeente": "Evergem",
+        "lat": 51.10892,
+        "long": 3.703075,
+        "rank": 14,
+        "score": 0.4971797564312416
+      },
+      {
+        "group_id": 83,
+        "group_name": "Tienen 2",
+        "gemeente": "Tienen",
+        "lat": 50.81330918367914,
+        "long": 4.935166168467146,
+        "rank": 15,
+        "score": 0.47713167763447345
+      },
+      {
+        "group_id": 76,
+        "group_name": "Nieuwpoort teller 1",
+        "gemeente": "Nieuwpoort",
+        "lat": 51.13397,
+        "long": 2.75624,
+        "rank": 16,
+        "score": 0.44677224646002356
+      },
+      {
+        "group_id": 24,
+        "group_name": "Diest teller 1",
+        "gemeente": "Diest",
+        "lat": 50.977945,
+        "long": 5.044775,
+        "rank": 17,
+        "score": 0.4217799827309045
+      },
+      {
+        "group_id": 1,
+        "group_name": "Aalst 2",
+        "gemeente": "Aalst",
+        "lat": 50.93455666666667,
+        "long": 4.015630000000001,
+        "rank": 18,
+        "score": 0.4066535722281996
+      },
+      {
+        "group_id": 34,
+        "group_name": "Genk",
+        "gemeente": "Genk",
+        "lat": 50.97172,
+        "long": 5.48927,
+        "rank": 19,
+        "score": 0.40356058410599743
+      },
+      {
+        "group_id": 14,
+        "group_name": "Bree",
+        "gemeente": "Bree",
+        "lat": 51.13679500160176,
+        "long": 5.597669323604317,
+        "rank": 20,
+        "score": 0.38831607683891567
+      },
+      {
+        "group_id": 75,
+        "group_name": "Nieuwpoort totem",
+        "gemeente": "Nieuwpoort",
+        "lat": 51.134995,
+        "long": 2.74329,
+        "rank": 21,
+        "score": 0.35984777548605423
+      },
+      {
+        "group_id": 2,
+        "group_name": "Aalter",
+        "gemeente": "Aalter",
+        "lat": 51.1058367,
+        "long": 3.4350591,
+        "rank": 22,
+        "score": 0.3254505448418005
+      },
+      {
+        "group_id": 17,
+        "group_name": "Brugge teller 1",
+        "gemeente": "Brugge",
+        "lat": 51.23019,
+        "long": 3.22809,
+        "rank": 23,
+        "score": 0.3100526700458886
+      },
+      {
+        "group_id": 39,
+        "group_name": "Hamme totem",
+        "gemeente": "Hamme",
+        "lat": 51.1017709,
+        "long": 4.1469307,
+        "rank": 24,
+        "score": 0.2950217982943174
+      },
+      {
+        "group_id": 72,
+        "group_name": "Melle teller 2",
+        "gemeente": "Melle",
+        "lat": 50.9986113,
+        "long": 3.8040599,
+        "rank": 25,
+        "score": 0.2693762563346021
+      },
+      {
+        "group_id": 19,
+        "group_name": "Brugge, Sint-Andries",
+        "gemeente": "Brugge",
+        "lat": 51.19286,
+        "long": 3.16252,
+        "rank": 26,
+        "score": 0.23712635411250096
+      },
+      {
+        "group_id": 16,
+        "group_name": "Brugge",
+        "gemeente": "Brugge",
+        "lat": 51.22632,
+        "long": 3.24095,
+        "rank": 27,
+        "score": 0.23064645325420183
+      },
+      {
+        "group_id": 57,
+        "group_name": "Heverlee teller 2",
+        "gemeente": "Leuven",
+        "lat": 50.8466164,
+        "long": 4.6957187000000005,
+        "rank": 28,
+        "score": 0.22379251838635011
+      },
+      {
+        "group_id": 12,
+        "group_name": "Brasschaat 2",
+        "gemeente": "Brasschaat",
+        "lat": 51.275075,
+        "long": 4.471955,
+        "rank": 29,
+        "score": 0.22052152889998075
+      },
+      {
+        "group_id": 93,
+        "group_name": "Zele teller 1",
+        "gemeente": "Zele",
+        "lat": 51.0605869,
+        "long": 4.055221850000001,
+        "rank": 30,
+        "score": 0.20838364868953158
+      },
+      {
+        "group_id": 88,
+        "group_name": "Wervik teller 2",
+        "gemeente": "Wervik",
+        "lat": 50.805675,
+        "long": 3.09182,
+        "rank": 31,
+        "score": 0.20630910459582502
+      },
+      {
+        "group_id": 37,
+        "group_name": "Gent R4",
+        "gemeente": "Gent",
+        "lat": 51.0876313,
+        "long": 3.7587918,
+        "rank": 32,
+        "score": 0.20456135973785844
+      },
+      {
+        "group_id": 80,
+        "group_name": "Pelt teller 1",
+        "gemeente": "Pelt",
+        "lat": 51.231135,
+        "long": 5.443759999999999,
+        "rank": 33,
+        "score": 0.20419459216429073
+      },
+      {
+        "group_id": 67,
+        "group_name": "Maasmechelen teller 1",
+        "gemeente": "Maasmechelen",
+        "lat": 50.97034,
+        "long": 5.6980450000000005,
+        "rank": 34,
+        "score": 0.19966820025505957
+      },
+      {
+        "group_id": 85,
+        "group_name": "Torhout teller 1",
+        "gemeente": "Torhout",
+        "lat": 51.07154,
+        "long": 3.082525,
+        "rank": 35,
+        "score": 0.1947974785595317
+      },
+      {
+        "group_id": 62,
+        "group_name": "Lokeren teller 1",
+        "gemeente": "Lokeren",
+        "lat": 51.09628,
+        "long": 3.97024,
+        "rank": 36,
+        "score": 0.19404253520820589
+      },
+      {
+        "group_id": 94,
+        "group_name": "Zemst",
+        "gemeente": "Zemst",
+        "lat": 50.9903936,
+        "long": 4.4707023,
+        "rank": 37,
+        "score": 0.19071212013800717
+      },
+      {
+        "group_id": 55,
+        "group_name": "Tervuren",
+        "gemeente": "Kraainem",
+        "lat": 50.81896,
+        "long": 4.47803,
+        "rank": 38,
+        "score": 0.1898078441233949
+      },
+      {
+        "group_id": 48,
+        "group_name": "Houthalen-Helchteren",
+        "gemeente": "Houthalen-Helchteren",
+        "lat": 51.0644267,
+        "long": 5.3819796,
+        "rank": 39,
+        "score": 0.18691154800278637
+      },
+      {
+        "group_id": 46,
+        "group_name": "Herentals totem",
+        "gemeente": "Herentals",
+        "lat": 51.1736963,
+        "long": 4.8123065,
+        "rank": 40,
+        "score": 0.18133634604329835
+      },
+      {
+        "group_id": 86,
+        "group_name": "Vilvoorde",
+        "gemeente": "Vilvoorde",
+        "lat": 50.91372,
+        "long": 4.41497,
+        "rank": 41,
+        "score": 0.17516397639383505
+      },
+      {
+        "group_id": 47,
+        "group_name": "Herk De Stad",
+        "gemeente": "Herk-de-Stad",
+        "lat": 50.9437,
+        "long": 5.177205000000001,
+        "rank": 42,
+        "score": 0.15706402710309872
+      },
+      {
+        "group_id": 15,
+        "group_name": "Brugge",
+        "gemeente": "Brugge",
+        "lat": 51.17416,
+        "long": 3.20048,
+        "rank": 43,
+        "score": 0.15704106477187696
+      },
+      {
+        "group_id": 90,
+        "group_name": "Westerlo teller 1",
+        "gemeente": "Westerlo",
+        "lat": 51.081955,
+        "long": 4.913295,
+        "rank": 44,
+        "score": 0.15225409160988335
+      },
+      {
+        "group_id": 51,
+        "group_name": "Kampenhout teller 1",
+        "gemeente": "Kampenhout",
+        "lat": 50.956355,
+        "long": 4.59241,
+        "rank": 45,
+        "score": 0.15062043927375615
+      },
+      {
+        "group_id": 49,
+        "group_name": "Ieper",
+        "gemeente": "Ieper",
+        "lat": 50.85025,
+        "long": 2.85616,
+        "rank": 46,
+        "score": 0.14826917768896872
+      },
+      {
+        "group_id": 44,
+        "group_name": "Heist op den Berg 2",
+        "gemeente": "Heist-op-den-Berg",
+        "lat": 51.06904,
+        "long": 4.69524,
+        "rank": 47,
+        "score": 0.1465755570849636
+      },
+      {
+        "group_id": 92,
+        "group_name": "Zaventem totem",
+        "gemeente": "Zaventem",
+        "lat": 50.8871216,
+        "long": 4.4597084,
+        "rank": 48,
+        "score": 0.14367374378707168
+      },
+      {
+        "group_id": 89,
+        "group_name": "Geel totem",
+        "gemeente": "Westerlo",
+        "lat": 51.1348979,
+        "long": 4.9397605,
+        "rank": 49,
+        "score": 0.13738470654604226
+      },
+      {
+        "group_id": 32,
+        "group_name": "Geel teller 1",
+        "gemeente": "Geel",
+        "lat": 51.148115,
+        "long": 4.996705,
+        "rank": 50,
+        "score": 0.1358974999571892
+      },
+      {
+        "group_id": 45,
+        "group_name": "Herent teller 1",
+        "gemeente": "Herent",
+        "lat": 50.891315000000006,
+        "long": 4.64687,
+        "rank": 51,
+        "score": 0.13019119824000897
+      },
+      {
+        "group_id": 23,
+        "group_name": "Retie",
+        "gemeente": "Dessel",
+        "lat": 51.25467015,
+        "long": 5.1038861,
+        "rank": 52,
+        "score": 0.12862897173170243
+      },
+      {
+        "group_id": 33,
+        "group_name": "Bokrijk",
+        "gemeente": "Genk",
+        "lat": 50.95264,
+        "long": 5.41001,
+        "rank": 53,
+        "score": 0.12809828891252537
+      },
+      {
+        "group_id": 4,
+        "group_name": "Ardooie teller 1",
+        "gemeente": "Ardooie",
+        "lat": 50.967835,
+        "long": 3.18445,
+        "rank": 54,
+        "score": 0.12752393631065598
+      },
+      {
+        "group_id": 60,
+        "group_name": "Lier teller 1",
+        "gemeente": "Lier",
+        "lat": 51.11696,
+        "long": 4.584405,
+        "rank": 55,
+        "score": 0.12748875084374803
+      },
+      {
+        "group_id": 50,
+        "group_name": "Roeselare totem",
+        "gemeente": "Izegem",
+        "lat": 50.91717,
+        "long": 3.18772,
+        "rank": 56,
+        "score": 0.1210213291629394
+      },
+      {
+        "group_id": 5,
+        "group_name": "As",
+        "gemeente": "As",
+        "lat": 51.00509,
+        "long": 5.60389,
+        "rank": 57,
+        "score": 0.11698130704542944
+      },
+      {
+        "group_id": 43,
+        "group_name": "Heist op den Berg 1",
+        "gemeente": "Heist-op-den-Berg",
+        "lat": 51.06759,
+        "long": 4.68823,
+        "rank": 58,
+        "score": 0.11599171436826713
+      },
+      {
+        "group_id": 66,
+        "group_name": "Maaseik teller 1",
+        "gemeente": "Maaseik",
+        "lat": 51.093515,
+        "long": 5.797205,
+        "rank": 59,
+        "score": 0.11011738029132025
+      },
+      {
+        "group_id": 64,
+        "group_name": "Lommel teller 1",
+        "gemeente": "Lommel",
+        "lat": 51.23288,
+        "long": 5.292,
+        "rank": 60,
+        "score": 0.10941228844710002
+      },
+      {
+        "group_id": 71,
+        "group_name": "Grimbergen",
+        "gemeente": "Meise",
+        "lat": 50.92127,
+        "long": 4.34013,
+        "rank": 61,
+        "score": 0.10871086882132096
+      },
+      {
+        "group_id": 3,
+        "group_name": "Aarschot",
+        "gemeente": "Aarschot",
+        "lat": 50.99084,
+        "long": 4.81259,
+        "rank": 62,
+        "score": 0.10697641156542052
+      },
+      {
+        "group_id": 91,
+        "group_name": "Zaventem",
+        "gemeente": "Zaventem",
+        "lat": 50.86995,
+        "long": 4.45444,
+        "rank": 63,
+        "score": 0.10593539692216719
+      },
+      {
+        "group_id": 61,
+        "group_name": "Gierde lille",
+        "gemeente": "Lille",
+        "lat": 51.24541825,
+        "long": 4.82981335,
+        "rank": 64,
+        "score": 0.105201782133655
+      },
+      {
+        "group_id": 20,
+        "group_name": "Deinze teller 2",
+        "gemeente": "Deinze",
+        "lat": 50.96018,
+        "long": 3.55578,
+        "rank": 65,
+        "score": 0.1000534128716755
+      },
+      {
+        "group_id": 68,
+        "group_name": "Machelen",
+        "gemeente": "Machelen",
+        "lat": 50.91618331151478,
+        "long": 4.456121776137429,
+        "rank": 66,
+        "score": 0.09868281659394386
+      },
+      {
+        "group_id": 11,
+        "group_name": "Bilzen",
+        "gemeente": "Bilzen",
+        "lat": 50.86015,
+        "long": 5.50161,
+        "rank": 67,
+        "score": 0.09780360915479835
+      },
+      {
+        "group_id": 8,
+        "group_name": "Balen 1",
+        "gemeente": "Balen",
+        "lat": 51.160205,
+        "long": 5.19007,
+        "rank": 68,
+        "score": 0.09720399577509335
+      },
+      {
+        "group_id": 21,
+        "group_name": "Nevele",
+        "gemeente": "Deinze",
+        "lat": 51.0276612,
+        "long": 3.558569,
+        "rank": 69,
+        "score": 0.09483514995124838
+      },
+      {
+        "group_id": 79,
+        "group_name": "Peer teller 1",
+        "gemeente": "Peer",
+        "lat": 51.134315,
+        "long": 5.478545,
+        "rank": 70,
+        "score": 0.09282379594581856
+      },
+      {
+        "group_id": 56,
+        "group_name": "Lanaken teller 1",
+        "gemeente": "Lanaken",
+        "lat": 50.881215,
+        "long": 5.63076,
+        "rank": 71,
+        "score": 0.09158671977241066
+      },
+      {
+        "group_id": 65,
+        "group_name": "Lummen",
+        "gemeente": "Lummen",
+        "lat": 50.979745,
+        "long": 5.209485,
+        "rank": 72,
+        "score": 0.08689259489826442
+      },
+      {
+        "group_id": 10,
+        "group_name": "Beveren teller 1",
+        "gemeente": "Beveren",
+        "lat": 51.19646335,
+        "long": 4.2361924,
+        "rank": 73,
+        "score": 0.08680467464837187
+      },
+      {
+        "group_id": 73,
+        "group_name": "Meulebeke teller 1",
+        "gemeente": "Meulebeke",
+        "lat": 50.960385,
+        "long": 3.24481,
+        "rank": 74,
+        "score": 0.08388049250763983
+      },
+      {
+        "group_id": 13,
+        "group_name": "Brecht teller 1",
+        "gemeente": "Brecht",
+        "lat": 51.357455,
+        "long": 4.62426,
+        "rank": 75,
+        "score": 0.08237184990213349
+      },
+      {
+        "group_id": 81,
+        "group_name": "Pepingen teller 1",
+        "gemeente": "Pepingen",
+        "lat": 50.75836,
+        "long": 4.165285,
+        "rank": 76,
+        "score": 0.08055561836926926
+      },
+      {
+        "group_id": 77,
+        "group_name": "Nijlen teller 1",
+        "gemeente": "Nijlen",
+        "lat": 51.149935,
+        "long": 4.6447400000000005,
+        "rank": 77,
+        "score": 0.0799289414156617
+      },
+      {
+        "group_id": 69,
+        "group_name": "Malle teller 1",
+        "gemeente": "Malle",
+        "lat": 51.316815,
+        "long": 4.73862,
+        "rank": 78,
+        "score": 0.0753596445638163
+      },
+      {
+        "group_id": 87,
+        "group_name": "Wemmel teller 1",
+        "gemeente": "Wemmel",
+        "lat": 50.914285,
+        "long": 4.295695,
+        "rank": 79,
+        "score": 0.07496015557651174
+      },
+      {
+        "group_id": 6,
+        "group_name": "Asse teller 1",
+        "gemeente": "Asse",
+        "lat": 50.89621,
+        "long": 4.17294,
+        "rank": 80,
+        "score": 0.07449118219123624
+      },
+      {
+        "group_id": 74,
+        "group_name": "Deinze teller 1",
+        "gemeente": "Nazareth",
+        "lat": 50.9598305,
+        "long": 3.555502,
+        "rank": 81,
+        "score": 0.07385578899024357
+      },
+      {
+        "group_id": 7,
+        "group_name": "Asse teller 2",
+        "gemeente": "Asse",
+        "lat": 50.89132,
+        "long": 4.1709,
+        "rank": 82,
+        "score": 0.06773143710886208
+      },
+      {
+        "group_id": 42,
+        "group_name": "Heers",
+        "gemeente": "Heers",
+        "lat": 50.75487,
+        "long": 5.30322,
+        "rank": 83,
+        "score": 0.06547933549868575
+      },
+      {
+        "group_id": 84,
+        "group_name": "Tongeren",
+        "gemeente": "Tongeren",
+        "lat": 50.79286,
+        "long": 5.52825,
+        "rank": 84,
+        "score": 0.0654300437021001
+      },
+      {
+        "group_id": 9,
+        "group_name": "Beersel teller 1",
+        "gemeente": "Beersel",
+        "lat": 50.751515,
+        "long": 4.3332,
+        "rank": 85,
+        "score": 0.06376929166489936
+      },
+      {
+        "group_id": 82,
+        "group_name": "St. pieters leeuw teller 1",
+        "gemeente": "Sint-Pieters-Leeuw",
+        "lat": 50.75533,
+        "long": 4.24951,
+        "rank": 86,
+        "score": 0.06116952794196379
+      },
+      {
+        "group_id": 38,
+        "group_name": "St. pieters leeuw teller 2",
+        "gemeente": "Halle",
+        "lat": 50.75509,
+        "long": 4.24943,
+        "rank": 87,
+        "score": 0.053738011000634626
+      }
+    ]
+  }
+}
