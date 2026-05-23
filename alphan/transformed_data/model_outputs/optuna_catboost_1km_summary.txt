@@ -1,24 +1,34 @@
 Trials: 40
-Best validation ROC AUC: 0.7644
-Best threshold by F1: 0.32
+Best validation ROC AUC: 0.7757
+Best threshold by validation F1: 0.43
 
-Metrics at that threshold:
-Accuracy: 0.7361
-Precision: 0.5606
-Recall: 0.6555
-F1: 0.6044
-ROC AUC: 0.7644
+Validation metrics at that threshold:
+Accuracy: 0.7483
+Precision: 0.5637
+Recall: 0.6047
+F1: 0.5835
+ROC AUC: 0.7757
 
-Confusion matrix:
-[[883, 261], [175, 333]]
+Test metrics at that threshold:
+Accuracy: 0.7567
+Precision: 0.6514
+Recall: 0.4488
+F1: 0.5315
+ROC AUC: 0.7691
+
+Validation confusion matrix:
+[[918, 219], [185, 283]]
+
+Test confusion matrix:
+[[1022, 122], [280, 228]]
 
 Best parameters:
 {
-  "iterations": 922,
+  "iterations": 315,
   "depth": 4,
-  "learning_rate": 0.01228718509526132,
-  "l2_leaf_reg": 13.499294665247008,
-  "random_strength": 8.835605295425422,
-  "bagging_temperature": 2.7543452839661082,
-  "border_count": 35
+  "learning_rate": 0.022627028693301514,
+  "l2_leaf_reg": 12.928915094328989,
+  "random_strength": 1.5126239291148593,
+  "bagging_temperature": 2.7159827242229575,
+  "border_count": 225
 }

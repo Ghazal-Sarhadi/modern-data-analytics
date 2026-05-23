@@ -1,0 +1,51 @@
+Test-set comparison after train/validation/test split
+
+Non-grouped site-level model
+- Source: transformed_data/model_outputs/optuna_catboost_1km_best_metrics.json
+- Validation threshold selected: 0.43
+- Best validation accuracy: 0.7483
+- Best validation precision: 0.5637
+- Best validation recall: 0.6047
+- Best validation F1: 0.5835
+- Best validation ROC AUC: 0.7757
+- Best validation confusion matrix: [[918, 219], [185, 283]]
+- Test accuracy: 0.7567
+- Test precision: 0.6514
+- Test recall: 0.4488
+- Test F1: 0.5315
+- Test ROC AUC: 0.7691
+- Test confusion matrix: [[1022, 122], [280, 228]]
+
+Grouped model
+- Source: experiments/optuna_catboost_grouped_1km_best_metrics.json
+- Validation threshold selected: 0.41
+- Best validation accuracy: 0.7597
+- Best validation precision: 0.5861
+- Best validation recall: 0.5654
+- Best validation F1: 0.5755
+- Best validation ROC AUC: 0.7696
+- Best validation confusion matrix: [[586, 113], [123, 160]]
+- Test accuracy: 0.7755
+- Test precision: 0.6626
+- Test recall: 0.5227
+- Test F1: 0.5844
+- Test ROC AUC: 0.7712
+- Test confusion matrix: [[630, 82], [147, 161]]
+
+Difference: grouped minus non-grouped on validation set
+- Accuracy: +0.0114
+- Precision: +0.0223
+- Recall: -0.0393
+- F1: -0.0080
+- ROC AUC: -0.0061
+
+Difference: grouped minus non-grouped on untouched test set
+- Accuracy: +0.0188
+- Precision: +0.0112
+- Recall: +0.0739
+- F1: +0.0529
+- ROC AUC: +0.0021
+
+Interpretation
+- After using a proper validation/test separation, the grouped model still performs better than the non-grouped model on every reported test metric.
+- The biggest gain is in recall and F1 on the untouched test months.

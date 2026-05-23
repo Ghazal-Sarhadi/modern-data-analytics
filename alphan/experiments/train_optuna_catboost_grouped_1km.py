@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -10,18 +11,24 @@ from catboost import CatBoostClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_score, recall_score, roc_auc_score
 
 
-TRANSFORMED_DATA_DIR = Path("transformed_data")
-MODEL_OUTPUTS_DIR = TRANSFORMED_DATA_DIR / "model_outputs"
-MODEL_OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parents[1]
+TRANSFORMED_DATA_DIR = BASE_DIR / "transformed_data"
+EXPERIMENT_DIR = Path(__file__).resolve().parent
 
-DATASET_PATH = MODEL_OUTPUTS_DIR / "station_month_bike_crash_dataset_1km_next_month.csv"
-STUDY_CSV = MODEL_OUTPUTS_DIR / "optuna_catboost_1km_study.csv"
-BEST_PARAMS_JSON = MODEL_OUTPUTS_DIR / "optuna_catboost_1km_best_params.json"
-BEST_METRICS_JSON = MODEL_OUTPUTS_DIR / "optuna_catboost_1km_best_metrics.json"
-SUMMARY_TXT = MODEL_OUTPUTS_DIR / "optuna_catboost_1km_summary.txt"
+DATASET_PATH = (
+    TRANSFORMED_DATA_DIR
+    / "combined_station_groups_1km"
+    / "outputs"
+    / "station_group_month_bike_crash_dataset_1km_next_month.csv"
+)
+STUDY_CSV = EXPERIMENT_DIR / "optuna_catboost_grouped_1km_study.csv"
+BEST_PARAMS_JSON = EXPERIMENT_DIR / "optuna_catboost_grouped_1km_best_params.json"
+BEST_METRICS_JSON = EXPERIMENT_DIR / "optuna_catboost_grouped_1km_best_metrics.json"
+SUMMARY_TXT = EXPERIMENT_DIR / "optuna_catboost_grouped_1km_summary.txt"
+N_TRIALS = int(os.getenv("OPTUNA_N_TRIALS", "40"))
 
-TARGET_COLUMN = "target_bike_crash_happened_next_month_1km"
-SIBLING_TARGET_COLUMN = "target_bike_crash_count_next_month_1km"
+TARGET_COLUMN = "target_bike_crash_happened_next_month_1km_grouped"
+SIBLING_TARGET_COLUMN = "target_bike_crash_count_next_month_1km_grouped"
 
 
 def split_timewise(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
@@ -52,9 +59,10 @@ def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str], dict[st
         feature_df[column] = feature_df[column].fillna("missing").astype(str)
 
     for column in numeric_features:
-        median_value = float(feature_df[column].median()) if not pd.isna(feature_df[column].median()) else 0.0
-        numeric_fill_values[column] = median_value
-        feature_df[column] = feature_df[column].fillna(median_value)
+        median = feature_df[column].median()
+        fill_value = float(median) if not pd.isna(median) else 0.0
+        numeric_fill_values[column] = fill_value
+        feature_df[column] = feature_df[column].fillna(fill_value)
 
     return feature_df, categorical_features, numeric_fill_values
 
@@ -98,6 +106,10 @@ def main() -> None:
 
     trial_rows: list[dict[str, object]] = []
 
+    def flush_trials() -> None:
+        if trial_rows:
+            pd.DataFrame(trial_rows).sort_values("validation_roc_auc", ascending=False).to_csv(STUDY_CSV, index=False)
+
     def objective(trial: optuna.Trial) -> float:
         params = {
             "iterations": trial.suggest_int("iterations", 200, 1200),
@@ -136,10 +148,11 @@ def main() -> None:
                 "validation_best_f1": best_f1,
             }
         )
+        flush_trials()
         return auc
 
-    study = optuna.create_study(direction="maximize", study_name="catboost_1km_next_month_auc")
-    study.optimize(objective, n_trials=40)
+    study = optuna.create_study(direction="maximize", study_name="catboost_grouped_1km_next_month_auc")
+    study.optimize(objective, n_trials=N_TRIALS)
 
     best_params = study.best_trial.params
     full_params = {
@@ -150,15 +163,15 @@ def main() -> None:
         "random_seed": 42,
     }
 
-    validation_model = CatBoostClassifier(**{**full_params, "use_best_model": True})
-    validation_model.fit(
+    best_model = CatBoostClassifier(**full_params)
+    best_model.fit(
         X_train,
         y_train,
         cat_features=cat_feature_indices,
         eval_set=(X_validation, y_validation),
         early_stopping_rounds=50,
     )
-    validation_score = validation_model.predict_proba(X_validation)[:, 1]
+    validation_score = best_model.predict_proba(X_validation)[:, 1]
     threshold, validation_best_f1 = find_best_f1_threshold(y_validation, validation_score)
     validation_metrics = evaluate_metrics(y_validation, validation_score, threshold)
     validation_metrics["threshold_selection_f1"] = validation_best_f1
@@ -173,7 +186,7 @@ def main() -> None:
     test_score = final_model.predict_proba(X_test)[:, 1]
     test_metrics = evaluate_metrics(y_test, test_score, threshold)
 
-    pd.DataFrame(trial_rows).sort_values("validation_roc_auc", ascending=False).to_csv(STUDY_CSV, index=False)
+    flush_trials()
     BEST_PARAMS_JSON.write_text(json.dumps(best_params, indent=2), encoding="utf-8")
     BEST_METRICS_JSON.write_text(
         json.dumps(
@@ -225,9 +238,9 @@ def main() -> None:
     ]
     SUMMARY_TXT.write_text("\n".join(summary_lines), encoding="utf-8")
 
-    print(f"Saved Optuna study to: {STUDY_CSV}")
-    print(f"Saved best params to: {BEST_PARAMS_JSON}")
-    print(f"Saved best metrics to: {BEST_METRICS_JSON}")
+    print(f"Saved grouped Optuna study to: {STUDY_CSV}")
+    print(f"Saved grouped best params to: {BEST_PARAMS_JSON}")
+    print(f"Saved grouped best metrics to: {BEST_METRICS_JSON}")
 
 
 if __name__ == "__main__":

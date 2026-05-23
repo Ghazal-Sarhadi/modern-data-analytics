@@ -225,33 +225,33 @@
     "group_avg_total_count_in_history": 8346.42857142857,
     "group_avg_total_count_out_history": 7329.888888888889
   },
-  "threshold": 0.34,
+  "threshold": 0.45,
   "metrics": {
-    "accuracy": 0.7686274509803922,
-    "precision": 0.6176470588235294,
-    "recall": 0.6136363636363636,
-    "f1": 0.6156351791530945,
-    "roc_auc": 0.7728047935210856,
-    "threshold": 0.34,
+    "accuracy": 0.7725490196078432,
+    "precision": 0.6301369863013698,
+    "recall": 0.5974025974025974,
+    "f1": 0.6133333333333333,
+    "roc_auc": 0.7782814096016344,
+    "threshold": 0.45,
     "confusion_matrix": [
       [
-        595,
-        117
+        604,
+        108
       ],
       [
-        119,
-        189
+        124,
+        184
       ]
     ]
   },
   "training_params": {
-    "iterations": 922,
-    "depth": 4,
-    "learning_rate": 0.01228718509526132,
-    "l2_leaf_reg": 13.499294665247008,
-    "random_strength": 8.835605295425422,
-    "bagging_temperature": 2.7543452839661082,
-    "border_count": 35,
+    "iterations": 1047,
+    "depth": 7,
+    "learning_rate": 0.03226367616791113,
+    "l2_leaf_reg": 8.735491791733086,
+    "random_strength": 1.3443394528246275,
+    "bagging_temperature": 3.122835275532818,
+    "border_count": 53,
     "loss_function": "Logloss",
     "eval_metric": "AUC",
     "verbose": false,

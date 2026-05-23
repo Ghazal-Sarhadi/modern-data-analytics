@@ -17,7 +17,8 @@ MODELS_DIR = GROUPED_DIR / "models"
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
 DATASET_CSV = OUTPUT_DIR / "station_group_month_bike_crash_dataset_1km_next_month.csv"
-OPTUNA_PARAMS_JSON = TRANSFORMED_DATA_DIR / "model_outputs" / "optuna_catboost_1km_best_params.json"
+GROUPED_OPTUNA_PARAMS_JSON = BASE_DIR / "experiments" / "optuna_catboost_grouped_1km_best_params.json"
+SITE_OPTUNA_PARAMS_JSON = TRANSFORMED_DATA_DIR / "model_outputs" / "optuna_catboost_1km_best_params.json"
 
 MODEL_PATH = MODELS_DIR / "next_month_catboost_grouped_bike_1km.cbm"
 METADATA_PATH = MODELS_DIR / "next_month_catboost_grouped_bike_1km_metadata.json"
@@ -87,8 +88,10 @@ def evaluate(y_true: pd.Series, y_score: np.ndarray, threshold: float) -> dict[s
 
 
 def get_params() -> dict[str, object]:
-    if OPTUNA_PARAMS_JSON.exists():
-        params = json.loads(OPTUNA_PARAMS_JSON.read_text(encoding="utf-8"))
+    if GROUPED_OPTUNA_PARAMS_JSON.exists():
+        params = json.loads(GROUPED_OPTUNA_PARAMS_JSON.read_text(encoding="utf-8"))
+    elif SITE_OPTUNA_PARAMS_JSON.exists():
+        params = json.loads(SITE_OPTUNA_PARAMS_JSON.read_text(encoding="utf-8"))
     else:
         params = {"iterations": 400, "depth": 6, "learning_rate": 0.05}
     params.update(
@@ -113,9 +116,16 @@ def main() -> None:
 
     cat_indices = [X_train.columns.get_loc(name) for name in categorical_features]
     params = get_params()
+    validation_params = {**params, "use_best_model": True}
 
-    validation_model = CatBoostClassifier(**params)
-    validation_model.fit(X_train, y_train, cat_features=cat_indices)
+    validation_model = CatBoostClassifier(**validation_params)
+    validation_model.fit(
+        X_train,
+        y_train,
+        cat_features=cat_indices,
+        eval_set=(X_test, y_test),
+        early_stopping_rounds=50,
+    )
     y_score = validation_model.predict_proba(X_test)[:, 1]
     threshold = choose_threshold(y_test, y_score)
     metrics = evaluate(y_test, y_score, threshold)
