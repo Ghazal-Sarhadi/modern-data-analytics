@@ -22,6 +22,7 @@ MAPPING_CSV = OUTPUT_DIR / "group_mapping.csv"
 MODEL_PATH = MODELS_DIR / "next_month_catboost_grouped_bike_1km.cbm"
 METADATA_PATH = MODELS_DIR / "next_month_catboost_grouped_bike_1km_metadata.json"
 IMPORTANCE_PATH = MODELS_DIR / "next_month_catboost_grouped_bike_1km_feature_importance.csv"
+DANGEROUS_POINTS_XLSX = BASE_DIR / "data" / "Dynamische lijst 2025.xlsx"
 
 
 EDITABLE_FEATURE_LABELS = {
@@ -156,6 +157,33 @@ def build_forecast_ranking(next_month_df: pd.DataFrame, group_meta_df: pd.DataFr
     return forecast_df, baseline_df
 
 
+def add_hidden_risk_flags(forecast_df: pd.DataFrame) -> pd.DataFrame:
+    flagged_df = forecast_df.copy()
+    flagged_df["hidden_risk_spot"] = False
+
+    if not DANGEROUS_POINTS_XLSX.exists():
+        return flagged_df
+
+    dangerous_points_df = pd.read_excel(DANGEROUS_POINTS_XLSX)
+    if "Gemeente" not in dangerous_points_df.columns:
+        return flagged_df
+
+    official_municipalities = {
+        str(value).strip().lower()
+        for value in dangerous_points_df["Gemeente"].dropna().tolist()
+        if str(value).strip()
+    }
+    if not official_municipalities:
+        return flagged_df
+
+    municipality_key = flagged_df["gemeente"].fillna("").astype(str).str.strip().str.lower()
+    flagged_df["hidden_risk_spot"] = (
+        (flagged_df["predicted_label"] == 1)
+        & (~municipality_key.isin(official_municipalities))
+    )
+    return flagged_df
+
+
 def choose_editable_features(next_month_df: pd.DataFrame) -> list[str]:
     importance_df = pd.read_csv(IMPORTANCE_PATH)
     numeric_columns = set(next_month_df.select_dtypes(include=["number"]).columns)
@@ -207,6 +235,7 @@ def main() -> None:
 
     historical_df = build_historical_ranking(monthly_df, group_meta_df)
     forecast_df, baseline_df = build_forecast_ranking(next_month_df, group_meta_df, model, metadata)
+    forecast_df = add_hidden_risk_flags(forecast_df)
     editable_features = choose_editable_features(next_month_df)
     control_ranges = build_control_ranges(next_month_df, editable_features)
 
@@ -247,7 +276,18 @@ def main() -> None:
             "historical": historical_df[["group_id", "group_name", "gemeente", "lat", "long", "historical_risk_rank", "smoothed_crashes_per_10000_cyclists"]]
             .rename(columns={"historical_risk_rank": "rank", "smoothed_crashes_per_10000_cyclists": "score"})
             .to_dict(orient="records"),
-            "forecast": forecast_df[["group_id", "group_name", "gemeente", "lat", "long", "forecast_risk_rank", "predicted_probability"]]
+            "forecast": forecast_df[
+                [
+                    "group_id",
+                    "group_name",
+                    "gemeente",
+                    "lat",
+                    "long",
+                    "forecast_risk_rank",
+                    "predicted_probability",
+                    "hidden_risk_spot",
+                ]
+            ]
             .rename(columns={"forecast_risk_rank": "rank", "predicted_probability": "score"})
             .to_dict(orient="records"),
         },

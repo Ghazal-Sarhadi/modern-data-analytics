@@ -108,6 +108,7 @@ class GroupedAppState:
                 "probability": float(fc["predicted_probability"]),
                 "predicted_label": int(fc["predicted_label"]),
                 "risk_label": str(fc["risk_label"]),
+                "hidden_risk_spot": bool(fc.get("hidden_risk_spot", False)),
                 "forecast_year": int(fc["year"]),
                 "forecast_month": int(fc["month"]),
             },

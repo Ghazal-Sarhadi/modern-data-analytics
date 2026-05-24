@@ -51,6 +51,10 @@ function markerIcon(rank, color) {
   });
 }
 
+function rankLabel(group) {
+  return group.hidden_risk_spot ? `${group.rank}!` : `${group.rank}`;
+}
+
 function getCurrentGroups() {
   let groups = bootstrap.groups[state.mode].slice();
   if (state.search) {
@@ -75,12 +79,13 @@ function renderMarkers() {
   groups.forEach((group) => {
     const color = scoreColor(group.rank, totalCount);
     const marker = L.marker([group.lat, group.long], {
-      icon: markerIcon(group.rank, color),
-      title: `${group.rank}. ${group.group_name}`,
+      icon: markerIcon(rankLabel(group), color),
+      title: `${rankLabel(group)}. ${group.group_name}`,
     });
     marker.bindTooltip(
-      `<strong>#${group.rank} ${group.group_name}</strong><br>${group.gemeente}<br>` +
-      `${state.mode === "historical" ? "Historical score" : "Forecast probability"}: ${formatNumber(group.score, 3)}`,
+      `<strong>#${rankLabel(group)} ${group.group_name}</strong><br>${group.gemeente}<br>` +
+      `${state.mode === "historical" ? "Historical score" : "Forecast probability"}: ${formatNumber(group.score, 3)}` +
+      (group.hidden_risk_spot ? `<br><em>Hidden risk spot</em>` : ``),
       { direction: "top" }
     );
     marker.on("click", () => selectGroup(group.group_id));
@@ -138,6 +143,10 @@ function renderDetail() {
   }
 
   const group = state.selectedGroup;
+  const forecastRankLabel = group.forecast.hidden_risk_spot ? `#${group.forecast.rank}!` : `#${group.forecast.rank}`;
+  const hiddenRiskNote = group.forecast.hidden_risk_spot
+    ? `<p class="secondary-note"><strong>Hidden Risk Spot:</strong> This group is predicted as higher risk but its municipality is not present in the official dangerous-points list used in the analysis notebook.</p>`
+    : "";
   const controlsMarkup = group.controls.map((control) => `
     <div class="predict-control">
       <div class="control-top">
@@ -157,9 +166,10 @@ function renderDetail() {
     <p class="secondary-note">
       ${group.metadata.municipality} · members ${group.metadata.member_site_count} · site ids ${group.metadata.member_site_ids}
     </p>
+    ${hiddenRiskNote}
     <div class="dense-list">
       <div class="dense-row"><strong>Historical rank</strong><span>#${group.historical.rank}</span></div>
-      <div class="dense-row"><strong>Forecast rank</strong><span>#${group.forecast.rank}</span></div>
+      <div class="dense-row"><strong>Forecast rank</strong><span>${forecastRankLabel}</span></div>
       <div class="dense-row"><strong>Total crashes</strong><span>${formatNumber(group.historical.total_crashes, 0)}</span></div>
       <div class="dense-row"><strong>Total cyclists</strong><span>${formatNumber(group.historical.total_cyclists, 0)}</span></div>
       <div class="dense-row"><strong>Crash rate / 10k cyclists</strong><span>${formatNumber(group.historical.crashes_per_10000_cyclists, 2)}</span></div>
