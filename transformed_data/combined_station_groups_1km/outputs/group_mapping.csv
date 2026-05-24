@@ -1,0 +1,152 @@
+site_id,group_id,group_name,group_base_name,member_site_count,group_lat,group_long,gemeente,datum_van
+10,1,Aalst 2,aalst,3,50.93455666666667,4.015630000000001,Aalst,2019-08-22
+11,1,Aalst 2,aalst,3,50.93455666666667,4.015630000000001,Aalst,2019-08-22
+19,1,Aalst 2,aalst,3,50.93455666666667,4.015630000000001,Aalst,2019-08-22
+115,2,Aalter,aalter,1,51.1058367,3.4350591,Aalter,2022-10-01
+87,3,Aarschot,aarschot,1,50.99084,4.81259,Aarschot,2022-07-16
+59,4,Ardooie teller 1,ardooie,2,50.967835,3.18445,Ardooie,2022-06-03
+60,4,Ardooie teller 1,ardooie,2,50.967835,3.18445,Ardooie,2022-06-03
+48,5,As,as,1,51.00509,5.60389,As,2022-06-01
+85,6,Asse teller 1,asse,1,50.89621,4.17294,Asse,2022-07-14
+86,7,Asse teller 2,asse,1,50.89132,4.1709,Asse,2022-07-14
+4,8,Balen 1,balen,2,51.160205,5.19007,Balen,2019-08-22
+5,8,Balen 1,balen,2,51.160205,5.19007,Balen,2019-08-22
+82,9,Beersel teller 1,beersel,2,50.751515,4.3332,Beersel,2022-07-13
+83,9,Beersel teller 1,beersel,2,50.751515,4.3332,Beersel,2022-07-13
+123,10,Beveren teller 1,beveren,2,51.19646335,4.2361924,Beveren,2022-10-06
+124,10,Beveren teller 1,beveren,2,51.19646335,4.2361924,Beveren,2022-10-06
+21,11,Bilzen,bilzen,1,50.86015,5.50161,Bilzen,2019-08-31
+2,12,Brasschaat 2,brasschaat,2,51.275075,4.4719549999999995,Brasschaat,2019-08-22
+3,12,Brasschaat 2,brasschaat,2,51.275075,4.4719549999999995,Brasschaat,2019-08-22
+90,13,Brecht teller 1,brecht,2,51.357455,4.62426,Brecht,2022-07-21
+91,13,Brecht teller 1,brecht,2,51.357455,4.62426,Brecht,2022-07-21
+25,14,Bree,bree,1,51.13679500160176,5.597669323604317,Bree,2020-05-09
+20,15,Brugge,brugge,1,51.17416,3.20048,Brugge,2019-08-22
+52,16,Brugge,brugge,1,51.22632,3.24095,Brugge,2022-06-01
+53,17,Brugge teller 1,brugge,2,51.23019,3.22809,Brugge,2022-06-02
+54,17,Brugge teller 1,brugge,2,51.23019,3.22809,Brugge,2022-06-02
+142,18,TEST Validatie BRUGGE Y2H22022134,brugge y2h22022134,1,51.22632,3.24095,Brugge,2023-10-24
+50,19,"Brugge, Sint-Andries","brugge, sint andries",2,51.192859999999996,3.16252,Brugge,2022-06-01
+51,19,"Brugge, Sint-Andries","brugge, sint andries",2,51.192859999999996,3.16252,Brugge,2022-06-01
+113,20,Deinze teller 2,deinze,1,50.96018,3.55578,Deinze,2022-09-21
+131,21,Nevele,nevele,1,51.0276612,3.558569,Deinze,2023-01-25
+122,22,Dendermonde totem,dendermonde,2,51.0373312,4.102261,Dendermonde,2022-10-05
+125,22,Dendermonde totem,dendermonde,2,51.0373312,4.102261,Dendermonde,2022-10-22
+134,23,Retie,retie,2,51.254670149999995,5.1038861,Dessel,2023-02-15
+135,23,Retie,retie,2,51.254670149999995,5.1038861,Dessel,2023-02-15
+101,24,Diest teller 1,diest,2,50.977945,5.044775,Diest,2022-08-02
+102,24,Diest teller 1,diest,2,50.977945,5.044775,Diest,2022-08-02
+150,25,Bertem,bertem,1,50.8687535,4.56136297,District Leuven,2025-10-17
+148,26,Hoeilaart,hoeilaart,1,50.76699493,4.44471001,District Leuven,2025-08-23
+151,27,Leuven,leuven,1,50.8690262,4.6854839,District Leuven,2025-10-18
+152,28,Opwijk,opwijk,1,50.968901168564656,4.149169474840164,District Vilvoorde-gewestwegen,2025-10-31
+145,29,Overijse,overijse,2,50.7883667,4.49057885,District Vilvoorde-gewestwegen,2025-05-22
+146,29,Overijse,overijse,2,50.7883667,4.49057885,District Vilvoorde-gewestwegen,2025-05-23
+147,30,Overijse,overijse,1,50.7797555,4.4975769,District Vilvoorde-gewestwegen,2025-08-22
+6,31,Evergem 2,evergem,2,51.10892,3.703075,Evergem,2019-08-22
+7,31,Evergem 2,evergem,2,51.10892,3.703075,Evergem,2019-08-22
+97,32,Geel teller 1,geel,2,51.148115000000004,4.996705,Geel,2022-07-26
+98,32,Geel teller 1,geel,2,51.148115000000004,4.996705,Geel,2022-07-26
+49,33,Bokrijk,bokrijk,1,50.95264,5.41001,Genk,2022-06-01
+14,34,Genk,genk,1,50.97172,5.48927,Genk,2019-08-22
+13,35,Gent,gent,1,51.03018,3.70146,Gent,2019-08-22
+118,36,Gent teller 1,gent,2,51.02811425,3.76826385,Gent,2022-10-04
+119,36,Gent teller 1,gent,2,51.02811425,3.76826385,Gent,2022-10-04
+136,37,Gent R4,gent r4,1,51.0876313,3.7587918,Gent,2023-03-01
+105,38,St. pieters leeuw teller 2,st. pieters leeuw,1,50.75509,4.24943,Halle,2022-08-04
+126,39,Hamme totem,hamme,1,51.1017709,4.1469307,Hamme,2022-10-25
+137,40,Hasselt-Kempische brug,hasselt kempische brug,2,50.94084615,5.3420024,Hasselt,2023-04-19
+138,40,Hasselt-Kempische brug,hasselt kempische brug,2,50.94084615,5.3420024,Hasselt,2023-04-20
+140,41,Hasselt ring,hasselt ring,1,50.9300038,5.3438616,Hasselt,2023-05-04
+28,42,Heers,heers,2,50.75487,5.30322,Heers,2022-04-14
+34,42,Heers,heers,2,50.75487,5.30322,Heers,2022-04-15
+8,43,Heist op den Berg 1,heist op den berg,1,51.06759,4.68823,Heist-op-den-Berg,2019-08-22
+9,44,Heist op den Berg 2,heist op den berg,1,51.06904,4.69524,Heist-op-den-Berg,2019-08-22
+72,45,Herent teller 1,herent,2,50.891315000000006,4.64687,Herent,2022-07-07
+73,45,Herent teller 1,herent,2,50.891315000000006,4.64687,Herent,2022-07-07
+94,46,Herentals totem,herentals,2,51.1736963,4.8123065,Herentals,2022-07-24
+110,46,Herentals totem,herentals,2,51.1736963,4.8123065,Herentals,2022-08-31
+30,47,Herk De Stad,herk de stad,2,50.9437,5.177205000000001,Herk-de-Stad,2022-04-14
+31,47,Herk De Stad,herk de stad,2,50.9437,5.177205000000001,Herk-de-Stad,2022-04-14
+139,48,Houthalen-Helchteren,houthalen helchteren,1,51.0644267,5.3819796,Houthalen-Helchteren,2023-04-21
+67,49,Ieper,ieper,2,50.85025,2.85616,Ieper,2022-06-30
+68,49,Ieper,ieper,2,50.85025,2.85616,Ieper,2022-06-30
+84,50,Roeselare totem,roeselare,1,50.91717,3.18772,Izegem,2022-07-13
+70,51,Kampenhout teller 1,kampenhout,2,50.956355,4.59241,Kampenhout,2022-07-07
+71,51,Kampenhout teller 1,kampenhout,2,50.956355,4.59241,Kampenhout,2022-07-07
+143,52,Eco Display Classic Budastraat,eco display classic budastraat,1,50.83066,3.26286,Kortrijk,2023-12-08
+16,53,Kortrijk 1,kortrijk,2,50.833355,3.27775,Kortrijk,2019-08-22
+17,53,Kortrijk 1,kortrijk,2,50.833355,3.27775,Kortrijk,2019-08-22
+74,54,Kortrijk teller 1,kortrijk,2,50.81917,3.257295,Kortrijk,2022-07-07
+75,54,Kortrijk teller 1,kortrijk,2,50.81917,3.257295,Kortrijk,2022-07-07
+12,55,Tervuren,tervuren,1,50.81896,4.47803,Kraainem,2019-08-22
+35,56,Lanaken teller 1,lanaken,2,50.881215,5.63076,Lanaken,2022-04-15
+36,56,Lanaken teller 1,lanaken,2,50.881215,5.63076,Lanaken,2022-04-15
+76,57,Heverlee teller 2,heverlee,2,50.8466164,4.6957187000000005,Leuven,2022-07-07
+108,57,Heverlee teller 2,heverlee,2,50.8466164,4.6957187000000005,Leuven,2022-08-25
+69,58,test leuven,leuven,2,50.875533000000004,4.7153163,Leuven,2022-07-07
+144,58,test leuven,leuven,2,50.875533000000004,4.7153163,Leuven,2024-01-12
+77,59,leuven totem,leuven,2,50.8868972,4.70837595,Leuven,2022-07-07
+107,59,leuven totem,leuven,2,50.8868972,4.70837595,Leuven,2022-08-23
+95,60,Lier teller 1,lier,2,51.11696,4.584405,Lier,2022-07-26
+96,60,Lier teller 1,lier,2,51.11696,4.584405,Lier,2022-07-26
+132,61,Gierde lille,gierde lille,2,51.24541825,4.82981335,Lille,2023-02-15
+133,61,Gierde lille,gierde lille,2,51.24541825,4.82981335,Lille,2023-02-15
+128,62,Lokeren teller 1,lokeren,2,51.09628,3.97024,Lokeren,2022-10-29
+129,62,Lokeren teller 1,lokeren,2,51.09628,3.97024,Lokeren,2022-10-29
+141,63,Test site A support,site a support,1,51.08342085,3.9961071208376326,Lokeren,2023-10-21
+37,64,Lommel teller 1,lommel,2,51.23288,5.292,Lommel,2022-04-20
+38,64,Lommel teller 1,lommel,2,51.23288,5.292,Lommel,2022-04-20
+32,65,Lummen,lummen,2,50.979744999999994,5.209485,Lummen,2022-04-14
+33,65,Lummen,lummen,2,50.979744999999994,5.209485,Lummen,2022-04-14
+43,66,Maaseik teller 1,maaseik,2,51.093515,5.797205,Maaseik,2022-04-28
+44,66,Maaseik teller 1,maaseik,2,51.093515,5.797205,Maaseik,2022-04-28
+41,67,Maasmechelen teller 1,maasmechelen,2,50.97034,5.6980450000000005,Maasmechelen,2022-04-22
+42,67,Maasmechelen teller 1,maasmechelen,2,50.97034,5.6980450000000005,Maasmechelen,2022-04-22
+1,68,Machelen,machelen,1,50.91618331151478,4.456121776137429,Machelen,2019-08-22
+103,69,Malle teller 1,malle,2,51.316815,4.73862,Malle,2022-08-03
+104,69,Malle teller 1,malle,2,51.316815,4.73862,Malle,2022-08-03
+99,70,Mechelen teller 1,mechelen,2,51.04567,4.468825,Mechelen,2022-07-28
+100,70,Mechelen teller 1,mechelen,2,51.04567,4.468825,Mechelen,2022-07-28
+27,71,Grimbergen,grimbergen,1,50.92127,4.34013,Meise,2021-08-14
+116,72,Melle teller 2,melle,2,50.9986113,3.8040599,Melle,2022-10-01
+117,72,Melle teller 2,melle,2,50.9986113,3.8040599,Melle,2022-10-01
+57,73,Meulebeke teller 1,meulebeke,2,50.960385,3.24481,Meulebeke,2022-06-03
+58,73,Meulebeke teller 1,meulebeke,2,50.960385,3.24481,Meulebeke,2022-06-03
+114,74,Deinze teller 1,deinze,1,50.9598305,3.555502,Nazareth,2022-09-21
+63,75,Nieuwpoort totem,nieuwpoort,2,51.134995,2.74329,Nieuwpoort,2022-06-24
+66,75,Nieuwpoort totem,nieuwpoort,2,51.134995,2.74329,Nieuwpoort,2022-06-30
+64,76,Nieuwpoort teller 1,nieuwpoort,2,51.13397,2.75624,Nieuwpoort,2022-06-24
+65,76,Nieuwpoort teller 1,nieuwpoort,2,51.13397,2.75624,Nieuwpoort,2022-06-24
+92,77,Nijlen teller 1,nijlen,2,51.149935,4.6447400000000005,Nijlen,2022-07-24
+93,77,Nijlen teller 1,nijlen,2,51.149935,4.6447400000000005,Nijlen,2022-07-24
+15,78,Oostende 2,oostende,2,51.213745,2.92754,Oostende,2019-08-22
+18,78,Oostende 2,oostende,2,51.213745,2.92754,Oostende,2019-08-22
+39,79,Peer teller 1,peer,2,51.134315,5.478545,Peer,2022-04-20
+40,79,Peer teller 1,peer,2,51.134315,5.478545,Peer,2022-04-20
+45,80,Pelt teller 1,pelt,2,51.231135,5.443759999999999,Pelt,2022-04-30
+46,80,Pelt teller 1,pelt,2,51.231135,5.443759999999999,Pelt,2022-04-30
+78,81,Pepingen teller 1,pepingen,2,50.758359999999996,4.165285,Pepingen,2022-07-13
+79,81,Pepingen teller 1,pepingen,2,50.758359999999996,4.165285,Pepingen,2022-07-13
+106,82,St. pieters leeuw teller 1,st. pieters leeuw,1,50.75533,4.24951,Sint-Pieters-Leeuw,2022-08-04
+22,83,Tienen 2,tienen,3,50.81330918367914,4.935166168467146,Tienen,2019-08-31
+23,83,Tienen 2,tienen,3,50.81330918367914,4.935166168467146,Tienen,2019-08-31
+24,83,Tienen 2,tienen,3,50.81330918367914,4.935166168467146,Tienen,2019-08-31
+29,84,Tongeren,tongeren,1,50.79286,5.52825,Tongeren,2022-04-14
+55,85,Torhout teller 1,torhout,2,51.07154,3.082525,Torhout,2022-06-02
+56,85,Torhout teller 1,torhout,2,51.07154,3.082525,Torhout,2022-06-02
+47,86,Vilvoorde,vilvoorde,1,50.91372,4.41497,Vilvoorde,2022-05-19
+80,87,Wemmel teller 1,wemmel,2,50.914285,4.295695,Wemmel,2022-07-13
+81,87,Wemmel teller 1,wemmel,2,50.914285,4.295695,Wemmel,2022-07-13
+61,88,Wervik teller 2,wervik,2,50.805674999999994,3.0918200000000002,Wervik,2022-06-05
+62,88,Wervik teller 2,wervik,2,50.805674999999994,3.0918200000000002,Wervik,2022-06-05
+112,89,Geel totem,geel,2,51.1348979,4.9397605,Westerlo,2022-09-06
+127,89,Geel totem,geel,2,51.1348979,4.9397605,Westerlo,2022-10-26
+88,90,Westerlo teller 1,westerlo,2,51.081955,4.913295,Westerlo,2022-07-16
+89,90,Westerlo teller 1,westerlo,2,51.081955,4.913295,Westerlo,2022-07-16
+26,91,Zaventem,zaventem,1,50.86995,4.45444,Zaventem,2021-08-06
+111,92,Zaventem totem,zaventem,1,50.8871216,4.4597084,Zaventem,2022-09-02
+120,93,Zele teller 1,zele,2,51.060586900000004,4.055221850000001,Zele,2022-10-05
+121,93,Zele teller 1,zele,2,51.060586900000004,4.055221850000001,Zele,2022-10-05
+109,94,Zemst,zemst,1,50.9903936,4.4707023,Zemst,2022-08-26
+149,95,Machelen,machelen,1,50.88297881,4.43356644,,2025-08-28

@@ -1,0 +1,27 @@
+[project]
+name = "modern-data-analytics-bike-safety"
+version = "0.1.0"
+description = "Bike station, weather, crash, mapping, and forecasting experiments."
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "folium",
+    "flask",
+    "openpyxl",
+    "pyproj",
+    "requests-cache",
+    "retry-requests",
+    "openmeteo-requests",
+    "torch",
+    "tensorflow",
+    "keras",
+    "catboost",
+    "xgboost",
+    "lightgbm", 
+    "geopandas", 
+    "matplotlib", 
+    "seaborn", 
+    "optuna"
+]

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Safety Dashboard</title>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+    >
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="sidebar-section hero">
+                <p class="eyebrow">Station Safety Dashboard</p>
+                <h1>Bike-safety context works best here at 1.0 km</h1>
+                <p class="lede">
+                    This app compares observed and forecast station safety. The default view uses the
+                    bike-only <strong>1.0 km</strong> radius as the final project lens.
+                </p>
+            </div>
+
+            <div class="sidebar-section controls">
+                <div class="control-grid">
+                    <label>
+                        <span>Radius</span>
+                        <input type="text" value="1.0 km bike-only" disabled>
+                    </label>
+                    <label>
+                        <span>Ranking mode</span>
+                        <select id="mode-select">
+                            <option value="historical" selected>Historical risk</option>
+                            <option value="forecast">Forecast risk</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Station search</span>
+                        <input id="search-input" type="text" placeholder="Search by station name">
+                    </label>
+                    <label>
+                        <span>Municipality</span>
+                        <select id="municipality-select">
+                            <option value="">All municipalities</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>View</span>
+                        <select id="view-select">
+                            <option value="all" selected>All stations</option>
+                            <option value="top50">Top 50 riskiest</option>
+                            <option value="bottom50">Top 50 safest</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div class="sidebar-section" id="radius-summary"></div>
+            <div class="sidebar-section" id="station-detail"></div>
+
+            <div class="sidebar-section evidence">
+                <h2>Method and Evidence</h2>
+                <ul id="method-evidence"></ul>
+            </div>
+        </aside>
+
+        <main class="map-panel">
+            <div class="map-wrapper">
+                <div id="map"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        window.APP_BOOTSTRAP = {{ bootstrap|tojson }};
+    </script>
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
