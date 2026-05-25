@@ -33,7 +33,11 @@ def build_traffic_monthly() -> pd.DataFrame:
 
     for data_file in sorted(data_dir.glob("data-*.csv")):
         for chunk in pd.read_csv(data_file, names=data_columns, chunksize=200_000):
-            fietsers_chunk = chunk[chunk["type"] == "FIETSERS"].copy()
+            fietsers_chunk = chunk[
+                (chunk["type"] == "FIETSERS") & 
+                (~chunk["site_id"].isin([123, 144]))
+            ].copy()
+
             if fietsers_chunk.empty:
                 continue
 
