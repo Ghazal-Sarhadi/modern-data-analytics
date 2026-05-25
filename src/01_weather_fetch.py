@@ -21,8 +21,9 @@ from retry_requests import retry
 
 # %%
 # Configuration
-DATA_DIR = Path("../data")
-TRANSFORMED_DATA_DIR = Path("../transformed_data")
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+TRANSFORMED_DATA_DIR = BASE_DIR / "transformed_data"
 OUTPUT_DIR = TRANSFORMED_DATA_DIR / "weather_outputs"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

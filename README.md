@@ -47,7 +47,7 @@ python src/08_build_grouped_app_assets.py
 python src/09_app_grouped.py
 ```
 
-Taking the weather data from the OpenMeteo API can take significant time due to API request limits. If weather is already present at `transformed_data/weather_outputs/station_weather_hourly.csv`, start from script `02`. Since this file is bigger than the size GitHub accepts it can be requested as zip from the authors.
+Taking the weather data from the OpenMeteo API can take significant time due to API request limits. If weather is already present at `transformed_data/weather_outputs/station_weather_hourly.csv`, start from script `02`. Since this file is bigger than the size GitHub accepts it, it can be downloaded in this link https://drive.google.com/file/d/1nG5Do5cDaKh88VBImOh3seyomLJKNNBy/view?usp=sharing
 
 Open:
 
