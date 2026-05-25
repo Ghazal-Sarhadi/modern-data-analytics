@@ -10,8 +10,9 @@ from sklearn.neighbors import BallTree
 
 # %%
 # Paths and configuration
-data_dir = Path("../data")
-transformed_data_dir = Path("../transformed_data")
+base_dir = Path(__file__).resolve().parent.parent
+data_dir = base_dir / "data"
+transformed_data_dir = base_dir / "transformed_data"
 output_dir = transformed_data_dir / "crash_outputs"
 output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -53,9 +54,8 @@ bicycle_code = 3
 
 # Sensors excluded based on EDA findings:
 # 123: 73% of null counts
-# 142: test sensor, located in the same place as 52, with more than 10% null counts
 # 144: 100% of null counts
-PROBLEMATIC_SENSORS = [123,142,144]
+PROBLEMATIC_SENSORS = [123,144]
 
 # %%
 # Load site metadata and coordinate envelope.

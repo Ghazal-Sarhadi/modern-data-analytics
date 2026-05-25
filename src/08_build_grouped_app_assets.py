@@ -40,8 +40,18 @@ EDITABLE_FEATURE_LABELS = {
     "bike_crash_count_1km_grouped_roll6_sum": "Previous 6-month bike crashes (1.0 km grouped)",
 }
 
-EDITABLE_FEATURE_PRIORITY = list(EDITABLE_FEATURE_LABELS)
-
+EDITABLE_FEATURE_PRIORITY = [
+    "group_avg_bike_crash_count_history",
+    "bike_crashes_per_1000_cyclists_lag1",
+    "total_count_in_lag1",
+    "total_count_out_lag1",
+    "total_count_sum_lag1",
+    "bike_crash_count_1km_grouped_lag1",
+    "bike_crash_count_1km_grouped_roll3_sum",
+    "bike_crash_count_1km_grouped_roll6_sum",
+    "avg_temperature_2m_lag1",
+    "total_precipitation_lag1",
+]
 NON_EDITABLE_FEATURES = {
     "group_id",
     "year",
@@ -185,19 +195,11 @@ def add_hidden_risk_flags(forecast_df: pd.DataFrame) -> pd.DataFrame:
 
 
 def choose_editable_features(next_month_df: pd.DataFrame) -> list[str]:
-    importance_df = pd.read_csv(IMPORTANCE_PATH)
     numeric_columns = set(next_month_df.select_dtypes(include=["number"]).columns)
-    chosen: list[str] = []
-    for feature in importance_df["feature"]:
-        if feature not in numeric_columns or feature in NON_EDITABLE_FEATURES or feature.startswith("target_"):
-            continue
-        if feature in EDITABLE_FEATURE_LABELS or feature in EDITABLE_FEATURE_PRIORITY:
+    chosen = []
+    for feature in EDITABLE_FEATURE_PRIORITY:
+        if feature in numeric_columns and feature not in NON_EDITABLE_FEATURES:
             chosen.append(feature)
-        if len(chosen) >= 10:
-            break
-    for fallback in EDITABLE_FEATURE_PRIORITY:
-        if fallback in next_month_df.columns and fallback not in chosen:
-            chosen.append(fallback)
         if len(chosen) >= 10:
             break
     return chosen[:10]
